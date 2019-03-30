@@ -20,28 +20,36 @@ Page({
       url: '../index/index'
     })
   },
-  minus: function (e) {
-    console.log(e)
-    // if (this.data.num == 0) {
-    //   return
-    // } else {
-      // this.setData({
-      //   num: --this.data.num
-      // })
-    // }
-  },
-  add: function (o) {
-    console.log(o.currentTarget.dataset.id)
-    app.globalData.shoppingCart.every(item => {
+  minus: function (o) {
+    this.data.shopLists.filter(item => {
+      let list = app.globalData.shoppingCart
       if (item.id == o.currentTarget.dataset.id) {
-        ++item.num
+        if (item.num!=0) {
+          --item.num 
+        } else{
+          return
+        }
       }
     })
-    console.log(app.globalData.shoppingCart)
-    let list = app.globalData.shoppingCart
-    // this.setData({
-    //   list: 
-    // })
+    this.setData({
+      list: app.globalData.shoppingCart,
+      shopLists: app.globalData.shoppingCart
+    })
+    
+  },
+  add: function (o) {
+    console.log(o)
+    app.globalData.shoppingCart.filter(item => {
+      let list = app.globalData.shoppingCart
+      if (item.id == o.currentTarget.dataset.id) {
+        ++item.num;
+        return
+      }
+    })
+    this.setData({
+      list: app.globalData.shoppingCart,
+      shopLists: app.globalData.shoppingCart
+    })
   },
   selectIt:function(o){
     var money = 0
