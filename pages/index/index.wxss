@@ -1,0 +1,47 @@
+.container{
+  width: 100%;
+  padding: 10rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.itemList{
+  width: 47%;
+  box-sizing: border-box;
+  margin-bottom: 10rpx;
+  margin: 0 1.5%
+}
+.itemImg{
+  width: 100%;
+}
+.itemImg image{
+  width: 100%
+}
+.itemText{
+  height:165rpx;
+  box-sizing: border-box
+}
+.itemTitle{
+  font-size: 26rpx;
+  color: black;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  line-height: 38rpx;
+  margin-bottom: 14rpx;
+}
+.itemBottom{
+  /* display: flex; */
+  color: gray;
+  font-size: 20rpx;
+}
+.itemPrice{
+  color: #f74c76;
+  font-size: 24rpx;
+}
+.itemBottom .people{
+  margin: 0 22rpx;  
+}

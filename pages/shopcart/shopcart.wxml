@@ -1,0 +1,56 @@
+<wxs module="filters" src="../../utils/desw.wxs"></wxs>
+<view class='shopcart'>
+  <view wx:if='{{!shopCart}}' class='noShop'>
+    <view class='carImg'>
+      <image src='../../imgs/carSelected.png' mode='widthFix'></image>
+    </view>
+    <text class='carEmpty'>购物车里空空如也</text>
+    <text class='toShop' bindtap='toShopping'>去抢购</text>
+  </view>
+  <view wx:else class='shop'>
+    <scroll-view scroll-y style='position: absolute;top: 0;left: 0;right: 0;bottom:100rpx'>
+      <view class='shopList'>
+        <checkbox-group bindchange="selectIt">
+          <view class='shopItem' wx:for='{{shopLists}}' data-id="{{item.id}}" wx:key='{{item.id}}'>
+            <label class="checkbox">
+              <view class='left'> 
+                <checkbox value="{{filters.toFix(item.price*item.num)}}" class='checkIcon' checked="{{item.checked}}"/>
+                <view class='checkImage'>
+                  <image src='{{item.imgUrl}}' mode='widthFix'></image>
+                </view>
+              </view>
+            </label>
+            <view class='right'>
+              <view class='top'>
+                <text class='title'>{{item.name}}</text>
+                <icon class='iconfont icon-shanchu' bindtap='delete' data-id='{{item.id}}'></icon>
+              </view>
+              <view class='bottom'>
+                <text class='price'>￥{{filters.toFix(item.price*item.num)}}</text>
+                <view class='addPlues'>
+                  <text bindtap='minus' class="{{item.num>0?'':'lock'}}" data-id='{{item.id}}' data-price='{{item.price}}'>-</text>
+                  <text>{{item.num}}</text>
+                  <text bindtap='add' data-id='{{item.id}}'>+</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </checkbox-group>
+      </view>
+    </scroll-view>
+    <view class='payView'>
+      <view class='viewLeft'>
+        <checkbox-group class="checkbox-group" bindchange="checkboxChange">
+          <label class="checkbox">
+            <checkbox  value="allSelected" checked='{{allSelect.checked}}'/>
+              全选
+          </label>
+        </checkbox-group>
+        <text class='allMoney'>合计：{{filters.toFix(allMoney)}}元</text>
+      </view>
+      <view class='settlement'>
+        去结算 
+      </view>
+    </view>
+  </view>
+</view>

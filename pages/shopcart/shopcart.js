@@ -1,0 +1,134 @@
+//logs.js
+const util = require('../../utils/util.js')
+var app = getApp()
+
+Page({
+  data: {
+    logs: [],
+    shopCart: false,
+    shopLists:[],
+    allMoney:0,
+    length:0,
+    hideLen: 0,
+    selectList:[],
+    allSelect:{
+      'checked': false
+    }
+  },
+  toShopping() {
+    wx.switchTab({
+      url: '../index/index'
+    })
+  },
+  minus: function (e) {
+    console.log(e)
+    // if (this.data.num == 0) {
+    //   return
+    // } else {
+      // this.setData({
+      //   num: --this.data.num
+      // })
+    // }
+  },
+  add: function (o) {
+    console.log(o.currentTarget.dataset.id)
+    app.globalData.shoppingCart.every(item => {
+      if (item.id == o.currentTarget.dataset.id) {
+        ++item.num
+      }
+    })
+    console.log(app.globalData.shoppingCart)
+    let list = app.globalData.shoppingCart
+    // this.setData({
+    //   list: 
+    // })
+  },
+  selectIt:function(o){
+    var money = 0
+    if(o.detail.value.length!=0){
+      let len = o.detail.value.length
+      for(let i=0; i<len; i++) {
+        money = money + parseFloat(o.detail.value[i])
+      }
+      this.setData({
+        allMoney: money
+      })
+      if (len == this.data.length) {
+        this.setData({
+          allSelect: {
+            'checked': true
+          }
+        })
+      } else {
+        this.setData({
+          allSelect: {
+            'checked': false
+          }
+        })
+      }
+    } else{
+      this.setData({
+        allMoney: 0
+      })
+    }
+  },
+  checkboxChange:function(o){
+    var arr = this.data.shopLists
+    let money = 0
+    for (let i = 0; i < arr.length; i++) {
+      arr[i].checked = o.detail.value.length;
+      money = money + parseFloat(arr[i].price*arr[i].num)
+    }
+    if (!o.detail.value.length){
+      this.setData({
+        shopLists: arr,
+        allMoney: 0
+      })
+    } else{
+      this.setData({
+        shopLists: arr,
+        allMoney: money
+      })
+    }
+    
+  },
+  delete: function(o) {
+    var id = o.currentTarget.dataset.id;
+    var list = app.globalData.shoppingCart;
+    var all=list.filter(item=>item.id!=id)
+    app.globalData.shoppingCart = all
+    this.setData({
+      shopLists: all,
+      length: all.length
+    })
+    if (all.length!=0){
+      this.setData({
+        shopCart: true,
+      })
+    } else{
+      this.setData({
+        shopCart: false
+      })
+    }
+  },
+  onShow :function(){
+    if (app.globalData.shoppingCart.length != '0') {
+      this.setData({
+        shopCart: true,
+        shopLists: app.globalData.shoppingCart,
+        length: app.globalData.shoppingCart.length
+      })
+    } else {
+      this.setData({
+        shopCart: false
+      })
+    }
+  },
+  onLoad: function () {
+    this.setData({
+      logs: (wx.getStorageSync('logs') || []).map(log => {
+        return util.formatTime(new Date(log))
+      })
+    })
+  }
+})

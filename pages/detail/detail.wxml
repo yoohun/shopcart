@@ -1,0 +1,60 @@
+<wxs module="filters" src="../../utils/desw.wxs"></wxs>
+<view class='contain'>
+  <view clas='detail'>
+    <view class='imgScroll'>
+      <swiper  indicator-dots="true" style="height:{{imgheights[current]}}rpx;"  bindchange="bindchange" >
+        <block wx:for="{{pro.imgUrls}}" wx:key="{{index}}">
+          <swiper-item>
+            <image src="{{item}}" data-id='{{index}}'  class="slide-image" mode='widthFix'  bindload="imageLoad"/>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class='product'>
+      <view class='title'>{{pro.title}}
+      </view>
+      <view class='price'>￥{{pro.price}}</view>
+      <view class='productDetail'>
+        <text class='title'>商品详情</text>
+      </view>
+    </view>
+  </view>
+  <view class='bottomRow'>
+    <view class='buyList' wx:if="{{buylist}}">
+      <view class='left borderRight'>
+        <icon class="iconfont icon-gouwuche"></icon>
+      </view>
+      <view class='left'>
+        <icon class="iconfont icon-ziyuan"></icon>
+      </view>
+      <view class='right'>
+        <view class='intoCar item' catchtap='putinShopCart'>加入购物车</view>
+        <view class='buyIt item'  catchtap='buy'>立即购买</view>
+      </view>
+    </view> 
+     <view class='choseCount' animation="{{ani}}">
+      <view class='burDes'>
+        <view class='buyImg'>
+          <image src="../../imgs/xmn.png" mode='widthFix'/>
+        </view>
+        <view class='buyPrice'>
+          <text>￥{{filters.toFix(pro.price*pro.buynum)}}</text>
+          <text>销量{{pro.sellNum}}件</text>
+          <text>商品编码</text>
+        </view>
+        <view>
+          <icon catchtap='closeTap' class='iconfont icon-shanchu3'></icon>
+        </view>
+      </view>
+      <view class='count'>
+        <text>购买数量</text>
+        <view class='addPlues'>
+          <text bindtap='minus' data-id='{{pro.id}}' class="{{num>0?'':'lock'}}">-</text>
+          <text>{{pro.buynum}}</text>
+          <text bindtap='add' data-id='{{pro.id}}'>+</text>
+        </view>
+      </view>
+      <button type='warn' size='default' class='sureBtn' catchtap='successBuy'>确定</button>
+    </view>
+  </view>
+</view>

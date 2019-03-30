@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class='container'>
+  <view class='itemList' wx:for='{{shopData}}' wx:key='{{item.id}}' bindtap='choseItem' data-id="{{item.id}}">
+    <view class='itemImg'>
+      <image src='{{item.imgUrl}}' mode='widthFix'></image>
+    </view>
+    <view class='itemText'>
+      <view class='itemTitle'>{{item.name}}</view>
+      <view class='itemBottom'>
+        <text class='itemPrice'>{{item.price}}</text>
+        <text class='people'>{{item.people}}人付款</text>
+        {{item.place}}
+      </view>
+    </view>
+  </view>
+</view>

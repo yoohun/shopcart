@@ -1,0 +1,35 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/shopcart/shopcart",
+    "pages/detail/detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f74c76",
+    "navigationBarTitleText": "购物车实例",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "imgs/index.png",
+        "selectedIconPath": "imgs/indexSelected.png"
+      },
+      {
+        "pagePath": "pages/shopcart/shopcart",
+        "text": "购物车",
+        "iconPath": "imgs/car.png",
+        "selectedIconPath": "imgs/carSelected.png"
+      }
+    ],
+    "color": "#515151",
+    "selectedColor": "#f74c76",
+    "position": "bottom",
+    "borderStyle": "black"
+  }
+  
+}
