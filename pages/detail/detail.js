@@ -15,7 +15,7 @@ Page({
   },
   closeTap () { //
     let animation = wx.createAnimation({});
-    animation.bottom(-435).step()
+    animation.bottom(-440).step()
     let pronum = 'pro.buynum'
     this.setData({
       buylist: true,
@@ -75,7 +75,7 @@ Page({
   successBuy(){
     var animation = wx.createAnimation({
     });
-    animation.bottom(-435).step()
+    animation.bottom(-440).step()
     let have=0
     let number=0
     app.globalData.shoppingCart.filter((item,index)=>{

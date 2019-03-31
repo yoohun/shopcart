@@ -53,8 +53,8 @@ Page({
   },
   selectIt:function(o){
     var money = 0
+    let len = o.detail.value.length
     if(o.detail.value.length!=0){
-      let len = o.detail.value.length
       for(let i=0; i<len; i++) {
         money = money + parseFloat(o.detail.value[i])
       }
@@ -76,7 +76,10 @@ Page({
       }
     } else{
       this.setData({
-        allMoney: 0
+        allMoney: 0,
+        allSelect: {
+          'checked': false
+        }
       })
     }
   },
@@ -124,7 +127,11 @@ Page({
       this.setData({
         shopCart: true,
         shopLists: app.globalData.shoppingCart,
-        length: app.globalData.shoppingCart.length
+        length: app.globalData.shoppingCart.length,
+        allSelect: {
+          'checked': false
+        },
+        allMoney:0
       })
     } else {
       this.setData({

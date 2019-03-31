@@ -10,8 +10,8 @@
   <view wx:else class='shop'>
     <scroll-view scroll-y style='position: absolute;top: 0;left: 0;right: 0;bottom:100rpx'>
       <view class='shopList'>
-        <checkbox-group bindchange="selectIt">
-          <view class='shopItem' wx:for='{{shopLists}}' data-id="{{item.id}}" wx:key='{{item.id}}'>
+        <checkbox-group  bindchange="selectIt">
+          <view class='shopItem'    wx:for='{{shopLists}}' data-id="{{item.id}}" wx:key='{{item.id}}'>
             <label class="checkbox">
               <view class='left'> 
                 <checkbox value="{{filters.toFix(item.price*item.num)}}" class='checkIcon' checked="{{item.checked}}"/>
