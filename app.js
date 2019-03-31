@@ -155,7 +155,7 @@ App({
         imgUrls: [
           '../../imgs/jinghua.png',
           '../../imgs/jinghua2.png',
-          // '../../imgs/jinghua3.png'
+          '../../imgs/jinghua3.png'
         ],
         price: 1235,
         sellNum: 0,
