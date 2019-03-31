@@ -21,24 +21,24 @@ Page({
     })
   },
   minus: function (o) {
+    let list = app.globalData.shoppingCart
     this.data.shopLists.filter(item => {
-      let list = app.globalData.shoppingCart
       if (item.id == o.currentTarget.dataset.id) {
-        if (item.num!=0) {
-          --item.num 
+        if (item.num!=1) {
+          --item.num
         } else{
           return
         }
+        console.log(this.data.shopLists)
       }
     })
     this.setData({
-      list: app.globalData.shoppingCart,
-      shopLists: app.globalData.shoppingCart
+      list: this.data.shopLists,
+      shopLists: this.data.shopLists
     })
     
   },
   add: function (o) {
-    console.log(o)
     app.globalData.shoppingCart.filter(item => {
       let list = app.globalData.shoppingCart
       if (item.id == o.currentTarget.dataset.id) {

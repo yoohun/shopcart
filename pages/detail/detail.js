@@ -10,34 +10,22 @@ Page({
     current: 0,
     buylist: true,
     num:1,
-    pro:{
-      id:'ys01',
-      title:'ytfguygugu',
-      imgUrls: [
-        '../../imgs/xmn.png',
-        '../../imgs/xmn2.png',
-        '../../imgs/xmn3.png'
-      ],
-      price: 55,
-      sellNum: 0,
-      buynum:1
-    },
+    pro:{ },
     allPrice: 55
   },
-  closeTap () {
+  closeTap () { //
+    let animation = wx.createAnimation({});
+    animation.bottom(-435).step()
+    let pronum = 'pro.buynum'
     this.setData({
       buylist: true,
-      num:1,
-      allPrice: this.data.pro.price
-    })
-    var animation = wx.createAnimation({
-    });
-    animation.bottom(-435).step()
-    this.setData({
+      [pronum]:1,
+      allPrice: this.data.pro.price,
       ani: animation.export()
     })
+    
   },
-  putinShopCart(){
+  putinShopCart(){ //点击加入购物车 出现选择
     var animation = wx.createAnimation({
       duration: 400,
       timingFunction: 'ease'
@@ -51,52 +39,83 @@ Page({
     })
   },
   buy() {
-    var shop = {
-      'id': this.data.pro.id,
-      'name': this.data.pro.title,
-      'imgUrl': this.data.pro.imgUrls[0],
-      'num': 1,
-      'price': this.data.pro.price
+    let have =0
+    app.globalData.shoppingCart.filter((item, index) => {
+      if (this.data.pro.id == item.id) {
+        let number = app.globalData.shoppingCart[index].num
+        let shop = app.globalData.shoppingCart
+        item.num = item.num + 1
+        this.setData({
+          shop
+        })
+        have = 1
+      }
+    })
+    if (!have) {
+      let shop = {
+        'id': this.data.pro.id,
+        'name': this.data.pro.title,
+        'imgUrl': this.data.pro.imgUrls[0],
+        'num': 1,
+        'price': this.data.pro.price,
+        'check':0
+      }
+      let shopList = app.globalData.shoppingCart.push(shop)
+      this.setData({
+        shoppingCart: shopList
+      })
     }
-    var shopList = app.globalData.shoppingCart.push(shop)
-
-    var pronum = 'pro.buynum'
     wx.showToast({
       title: '购买成功',
       icon: 'succes',
       duration: 1000,
       mask: true
     })
-    console.log(app.globalData.shoppingCart)
   },
   successBuy(){
+    var animation = wx.createAnimation({
+    });
+    animation.bottom(-435).step()
+    let have=0
+    let number=0
+    app.globalData.shoppingCart.filter((item,index)=>{
+      if (this.data.pro.id==item.id) {
+        let number = app.globalData.shoppingCart[index].num
+        let shop = app.globalData.shoppingCart
+        item.num = item.num + this.data.pro.buynum
+        this.setData({
+          shop
+        })
+        have = 1
+      }
+    })
+    if(!have){
+      let shop = {
+        'id': this.data.pro.id,
+        'name': this.data.pro.title,
+        'imgUrl': this.data.pro.imgUrls[0],
+        'num': this.data.pro.buynum + number,
+        'price': this.data.pro.price,
+        'checked': 0
+      }
+      let shopList = app.globalData.shoppingCart.push(shop)
+      this.setData({
+        shoppingCart: shopList
+      })
+    }
+    let pronum = 'pro.buynum'
+    this.setData({
+      buylist: true,
+      ani: animation.export(),
+      [pronum]: 1,
+      allPrice:this.data.pro.price
+    })
     wx.showToast({
       title: '成功加入购物车',
       icon: 'succes',
       duration: 1000,
       mask: true
     })
-    var animation = wx.createAnimation({
-    });
-    animation.bottom(-435).step()
-    var shop = {
-      'id': this.data.pro.id,
-      'name': this.data.pro.title,
-      'imgUrl': this.data.pro.imgUrls[0],
-      'num': this.data.pro.buynum,
-      'price': this.data.pro.price
-    }
-    var shopList = app.globalData.shoppingCart.push(shop)
-    var pronum = 'pro.buynum'
-    this.setData({
-      buylist: true,
-      ani: animation.export(),
-      shoppingCart:shopList,
-      [pronum]: 1,
-      allPrice:this.data.pro.price
-    })
-    console.log(app.globalData.shoppingCart)
-
     
   },
   imageLoad: function (e) {//获取图片真实宽度  
@@ -142,6 +161,12 @@ Page({
         return util.formatTime(new Date(log))
       })
     })
-    console.log(option.id)
+    app.globalData.proList.filter(item=>{
+      if (item.id == option.id){
+        this.setData({
+          pro: item
+        })
+      }
+    })
   }
 })

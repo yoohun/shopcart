@@ -14,7 +14,6 @@ swiper{
 .product{
   width: 100%;
   padding: 10rpx 6rpx;
-  border: 1rpx solid red;
   box-sizing: border-box;
 }
 .product .title{
@@ -34,9 +33,6 @@ swiper{
   color: red;
   font-size: 32rpx;
   margin: 20rpx 0
-}
-.product .productDetail{
-  
 }
 .productDetail .title{
   font-size: 32rpx;
