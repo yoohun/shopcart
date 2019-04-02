@@ -1,6 +1,7 @@
 <wxs module="filters" src="../../utils/desw.wxs"></wxs>
+
 <view class='contain'>
-  <view clas='detail'>
+  <view class='detail'>
     <view class='imgScroll'>
       <swiper  indicator-dots="true" style="height:{{imgheights[current]}}rpx;"  bindchange="bindchange" >
         <block wx:for="{{pro.imgUrls}}" wx:key="{{index}}">
@@ -14,8 +15,34 @@
       <view class='title'>{{pro.title}}
       </view>
       <view class='price'>￥{{pro.price}}</view>
+      <view class='message'>
+        <text>快递：￥{{filters.toFix(pro.youfei)}}</text>
+        <text>{{pro.place}}</text>
+        <text>月销量：{{pro.sellNum>9999?(((pro.sellNum-pro.sellNum%1000)/10000+'万')):(pro.sellNum)}}</text>
+      </view>
       <view class='productDetail'>
-        <text class='title'>商品详情</text>
+        <text class='xq'>商品详情</text>
+        <view class='detailImage'>
+          <image wx:for='{{pro.xqimg}}' wx:key='{{index}}' src='{{item}}' mode='widthFix'></image>
+        </view>
+      </view>
+    </view>
+    <view class='recommend'>
+      <text class='look'>
+          看了又看
+      </text>
+      <view class='recommend'>
+        <view class='recommendItem' wx:for="{{recommond}}" wx:key="{{index}}">
+          <view class='recommendImag'>
+            <image src='{{item.imgUrls}}' mode='widthFix'></image>
+          </view>
+          <text class='title'>{{item.title}}</text>
+          <view class='recommendText'>
+            <text>￥ <text>{{item.price}}</text> </text>
+            <text>{{item.sellNum}}人已买</text>
+          </view>
+        </view>
+        
       </view>
     </view>
   </view>
@@ -37,13 +64,15 @@
         <view class='buyImg'>
           <image src="../../imgs/xmn.png" mode='widthFix'/>
         </view>
-        <view class='buyPrice'>
+        <view class='right'>
+          <view class='buyPrice'>
           <text>￥{{filters.toFix(pro.price*pro.buynum)}}</text>
           <text>销量{{pro.sellNum}}件</text>
           <text>商品编码</text>
         </view>
         <view>
           <icon catchtap='closeTap' class='iconfont icon-shanchu3'></icon>
+        </view>
         </view>
       </view>
       <view class='count'>

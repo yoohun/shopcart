@@ -19,17 +19,21 @@
   height: 100rpx;
 }
 .carEmpty{
+  font-size: 38rpx;
   color: black;
   margin: 20rpx auto;
 }
 .toShop{
   width: 30%;
-  height: 50rpx;
+  /* height: 50rpx; */
   color: #f74c76;
   border: 1rpx solid #f74c76;
   border-radius: 8rpx;
   text-align: center;
-  margin:  20rpx auto
+  margin:  20rpx auto;
+  /* line-height:50rpx; */
+  font-size: 32rpx;
+  padding: 15rpx 0
 }
 .shop{
   width: 100%;

@@ -1,5 +1,6 @@
 //logs.js
 const util = require('../../utils/util.js')
+var jsonData = require('../../sj/data.js');
 const app = getApp()
 
 Page({
@@ -11,7 +12,8 @@ Page({
     buylist: true,
     num:1,
     pro:{ },
-    allPrice: 55
+    allPrice: 55,
+    recommond: []
   },
   closeTap () { //
     let animation = wx.createAnimation({});
@@ -159,8 +161,10 @@ Page({
     this.setData({
       logs: (wx.getStorageSync('logs') || []).map(log => {
         return util.formatTime(new Date(log))
-      })
+      }),
+      recommond: jsonData.dataList
     })
+
     app.globalData.proList.filter(item=>{
       if (item.id == option.id){
         this.setData({
@@ -168,5 +172,16 @@ Page({
         })
       }
     })
+    console.log(jsonData.dataList)
+    console.log(this.data.recommond)
+    // wx.request({
+    //   url: 'http://123.56.220.217:3031/list',
+    //   header: {
+    //     'content-type': 'application/json' // 默认值
+    //   },
+    //   success: function (res) {
+    //     console.log(res)
+    //   }
+    // })
   }
 })

@@ -18,7 +18,7 @@
   width: 100%
 }
 .itemText{
-  height:120rpx;
+  height:140rpx;
   box-sizing: border-box
 }
 .itemTitle{

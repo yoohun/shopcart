@@ -1,3 +1,7 @@
+.detail{
+  margin-bottom: 100rpx;
+  box-sizing: border-box 
+}
 .imgScroll{
   width: 100%;
 }
@@ -13,12 +17,11 @@ swiper{
 }
 .product{
   width: 100%;
-  padding: 10rpx 6rpx;
-  box-sizing: border-box;
+  padding: 10rpx 0;
 }
-.product .title{
+.title{
   width: 100%;
-  padding: 0 10rpx;
+  padding: 0 20rpx;
   box-sizing: border-box;
   word-wrap:break-word; 
   word-break:normal;
@@ -27,17 +30,101 @@ swiper{
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  font-size: 32rpx;
+  font-size: 34rpx;
+  line-height: 48rpx;
 }
 .product .price{
   color: red;
-  font-size: 32rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  font-size: 36rpx;
   margin: 20rpx 0
 }
-.productDetail .title{
-  font-size: 34rpx;
+.product .message{
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  color: rgb(172, 172, 172);
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.productDetail{
+  margin-top: 30rpx;
+}
+.productDetail .xq{
+  font-size: 36rpx;
   font-weight: bold;
   margin-top: 16rpx;
+  display: inline-block;
+  line-height: 80rpx;
+  margin-left: 20rpx;
+}
+.detailImage{
+  width: 100%;
+}
+.detailImage image{
+  width: 100%;
+}
+.recommend{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: rgb(245, 244, 244);
+  margin-bottom: 90rpx;
+}
+.recommendItem{
+  width: 47%;
+  box-sizing: border-box;
+  /* margin-bottom: 10rpx; */
+  margin: 0 1.5% 40rpx;
+  border: 1rpx solid gainsboro;
+  border-radius: 10rpx;
+  background: white;
+  overflow:hidden;
+}
+.recommendImag{
+  width: 100%;
+}
+.recommendImag image{
+  width: 100%;
+}
+.recommendItem .title{
+  font-size: 26rpx;
+  display: block;
+  line-height: 44rpx;
+  width: 100%;
+  padding: 0 12rpx;
+  box-sizing: border-box;
+  word-wrap:break-word; 
+  word-break:normal;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin: 14rpx 0;
+}
+.recommendText{
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  color: rgb(173, 172, 172);
+  box-sizing: border-box;
+  padding: 0 12rpx;
+  margin-bottom: 12rpx;
+}
+.recommend .look{
+  margin: 10rpx auto 30rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: gray;
+}
+.recommendText text{
+  display: inline-block;
+  line-height: 50rpx;
+}
+.recommendText text:first-child{
+  color: orangered;
 }
 .bottomRow .left{
   height: 90rpx;
@@ -63,10 +150,10 @@ swiper{
   line-height: 90rpx;
 }
 .intoCar{
-  background: green
+  background: rgb(0, 182, 0)
 }
 .buyIt{
-background: red
+background: rgba(248, 19, 19, 0.774)
 }
 .bottomRow .left .iconfont{
   color: rgb(173, 173, 173);
@@ -77,7 +164,7 @@ background: red
   left: 0;
   right: 0;
   bottom: 0;
-  font-size: 26rpx;
+  font-size: 30rpx;
   z-index: 10;
   background: white;
   height: 90rpx;
@@ -132,12 +219,20 @@ background: red
 .burDes{
   display: flex;
   padding: 0 20rpx 20rpx;
-  box-sizing: border-box
+  box-sizing: border-box;
+  border-top: 1rpx solid gainsboro;
+  /* height: 170rpx */
 }
 .burDes .iconfont{
   font-size: 44rpx;
   color: red;
   margin-top: 4rpx;
+}
+.burDes .right{
+  display: flex;
+  margin-left: 35rpx;
+  padding-top: 20rpx;
+  box-sizing: border-box
 }
 .buyImg{
   width: 140rpx;
@@ -150,8 +245,8 @@ background: red
   overflow: hidden
 }
 .buyImg image{
-  width: 140rpx;
-  height: 140rpx;
+  width: 150rpx;
+  height: 150rpx;
 }
 .buyPrice{
   flex: 1
@@ -160,9 +255,10 @@ background: red
   display: block;
   font-size: 30rpx;
   color: black;
-  line-height: 42rpx;
+  line-height: 50rpx;
+  text-align: left
 }
 .buyPrice text:first-child{
   color: red;
-  font-size: 26rpx;
+  font-size: 34rpx;
 }

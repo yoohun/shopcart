@@ -3,6 +3,17 @@ var filters = {
     return value.toFixed(2)//此处2为保留两位小数
   }
 }
+var changeWan = {
+  wan:function(value) {
+    if(value>9999){
+      return Number((value / 10000).toFixed(1))
+    } else{
+      return value
+    }
+  }
+}
+
 module.exports = {
-  toFix: filters.toFix
+  toFix: filters.toFix,
+  wan: changeWan.wan
 }

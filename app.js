@@ -48,8 +48,14 @@ App({
         // '../../imgs/xmnz4.png'
       ],
       price: 75,
-      sellNum: 0,
-      buynum: 1
+      sellNum: 31142,
+      buynum: 1,
+      xqimg: [
+        '../../imgs/xq.png',
+        '../../imgs/other.jpg'
+      ],
+      youfei: 0,
+      place: '上海'
     }, {
         id: 'ys02',
         title: 'ytfguygugu',
@@ -59,8 +65,14 @@ App({
           // '../../imgs/lvcha3.png'
         ],
         price: 34,
-        sellNum: 0,
-        buynum: 1
+        sellNum: 23412,
+        buynum: 1,
+        xqimg: [
+          '../../imgs/xq.png',
+          '../../imgs/other.jpg'
+        ],
+        youfei: 0,
+        place: '上海'
       }, {
         id: 'ys03',
         title: 'ytfguygugu',
@@ -70,19 +82,31 @@ App({
           // '../../imgs/xmn3.png'
         ],
         price: 74,
-        sellNum: 0,
-        buynum: 1
+        sellNum: 23345,
+        buynum: 1,
+        xqimg: [
+          '../../imgs/xq.png',
+          '../../imgs/other.jpg'
+        ],
+        youfei: 0,
+        place: '上海'
       }, {
         id: 'ys04',
         title: 'ytfguygugu',
         imgUrls: [
           '../../imgs/purple.png',
-          '../../imgs/purple3.png',
-          // '../../imgs/purple2.png'
+          // '../../imgs/purple3.png',
+          '../../imgs/purple2.png'
         ],
         price: 34,
-        sellNum: 0,
-        buynum: 1
+        sellNum: 2342341,
+        buynum: 1,
+        xqimg: [
+          '../../imgs/xq.png',
+          '../../imgs/other.jpg'
+        ],
+        youfei: 0,
+        place: '上海'
       }, {
         id: 'ys05',
         title: 'ytfguygugu',
@@ -92,8 +116,14 @@ App({
           // '../../imgs/xiang3.png'
         ],
         price: 53,
-        sellNum: 0,
-        buynum: 1
+        sellNum: 234,
+        buynum: 1,
+        xqimg: [
+          '../../imgs/xq.png',
+          '../../imgs/other.jpg'
+        ],
+        youfei: 0,
+        place: '上海'
       }, {
         id: 'ys06',
         title: 'ytfguygugu',
@@ -103,8 +133,14 @@ App({
           // '../../imgs/sanfen3.png'
         ],
         price: 75,
-        sellNum: 0,
-        buynum: 1
+        sellNum: 1241,
+        buynum: 1,
+        xqimg: [
+          '../../imgs/xq.png',
+          '../../imgs/other.jpg'
+        ],
+        youfei: 0,
+        place: '上海'
       }, {
         id: 'ys07',
         title: 'ytfguygugu',
@@ -114,8 +150,14 @@ App({
           // '../../imgs/fenbing3.png'
         ],
         price: 35,
-        sellNum: 0,
-        buynum: 1
+        sellNum: 23423,
+        buynum: 1,
+        xqimg: [
+          '../../imgs/xq.png',
+          '../../imgs/other.jpg'
+        ],
+        youfei: 0,
+        place: '上海'
       }, {
         id: 'ys08',
         title: 'ytfguygugu',
@@ -125,8 +167,14 @@ App({
           // '../../imgs/sl3.png'
         ],
         price: 64,
-        sellNum: 0,
-        buynum: 1
+        sellNum: 2341,
+        buynum: 1,
+        xqimg: [
+          '../../imgs/xq.png',
+          '../../imgs/other.jpg'
+        ],
+        youfei: 0,
+        place: '上海'
       }, {
         id: 'ys09',
         title: 'ytfguygugu',
@@ -136,8 +184,14 @@ App({
           // '../../imgs/fangshai3.png'
         ],
         price: 25,
-        sellNum: 0,
-        buynum: 1
+        sellNum: 5234,
+        buynum: 1,
+        xqimg: [
+          '../../imgs/xq.png',
+          '../../imgs/other.jpg'
+        ],
+        youfei: 0,
+        place: '上海'
       }, {
         id: 'ys10',
         title: 'ytfguygugu',
@@ -147,8 +201,14 @@ App({
           // '../../imgs/mians3.png'
         ],
         price: 345,
-        sellNum: 0,
-        buynum: 1
+        sellNum: 1241,
+        buynum: 1,
+        xqimg: [
+          '../../imgs/xq.png',
+          '../../imgs/other.jpg'
+        ],
+        youfei: 0,
+        place: '上海'
       }, {
         id: 'ys11',
         title: 'ytfguygugu',
@@ -158,8 +218,14 @@ App({
           '../../imgs/jinghua3.png'
         ],
         price: 1235,
-        sellNum: 0,
-        buynum: 1
+        sellNum: 253,
+        buynum: 1,
+        xqimg: [
+          '../../imgs/xq.png',
+          '../../imgs/other.jpg'
+        ],
+        youfei: 0,
+        place: '上海'
       }, {
         id: 'ys12',
         title: 'ytfguygugu',
@@ -170,7 +236,13 @@ App({
         ],
         price: 213,
         sellNum: 0,
-        buynum: 1
+        buynum: 1,
+        xqimg: [
+          '../../imgs/xq.png',
+          '../../imgs/other.jpg'
+        ],
+        youfei: 0,
+        place: '上海'
       }]
   }
 })
