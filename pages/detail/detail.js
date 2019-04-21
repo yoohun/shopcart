@@ -41,38 +41,42 @@ Page({
     })
   },
   buy() {
-    let have =0
-    app.globalData.shoppingCart.filter((item, index) => {
-      if (this.data.pro.id == item.id) {
-        let number = app.globalData.shoppingCart[index].num
-        let shop = app.globalData.shoppingCart
-        item.num = item.num + 1
-        this.setData({
-          shop
-        })
-        have = 1
-      }
+    wx.navigateTo({
+      url: '../buylist/buylist'
     })
-    if (!have) {
-      let shop = {
-        'id': this.data.pro.id,
-        'name': this.data.pro.title,
-        'imgUrl': this.data.pro.imgUrls[0],
-        'num': 1,
-        'price': this.data.pro.price,
-        'check':0
-      }
-      let shopList = app.globalData.shoppingCart.push(shop)
-      this.setData({
-        shoppingCart: shopList
-      })
-    }
-    wx.showToast({
-      title: '购买成功',
-      icon: 'succes',
-      duration: 1000,
-      mask: true
-    })
+    console.log(111)
+    // let have =0
+    // app.globalData.shoppingCart.filter((item, index) => {
+    //   if (this.data.pro.id == item.id) {
+    //     let number = app.globalData.shoppingCart[index].num
+    //     let shop = app.globalData.shoppingCart
+    //     item.num = item.num + 1
+    //     this.setData({
+    //       shop
+    //     })
+    //     have = 1
+    //   }
+    // })
+    // if (!have) {
+    //   let shop = {
+    //     'id': this.data.pro.id,
+    //     'name': this.data.pro.title,
+    //     'imgUrl': this.data.pro.imgUrls[0],
+    //     'num': 1,
+    //     'price': this.data.pro.price,
+    //     'check':0
+    //   }
+    //   let shopList = app.globalData.shoppingCart.push(shop)
+    //   this.setData({
+    //     shoppingCart: shopList
+    //   })
+    // }
+    // wx.showToast({
+    //   title: '购买成功',
+    //   icon: 'succes',
+    //   duration: 1000,
+    //   mask: true
+    // })
   },
   successBuy(){
     var animation = wx.createAnimation({
@@ -172,8 +176,8 @@ Page({
         })
       }
     })
-    console.log(jsonData.dataList)
-    console.log(this.data.recommond)
+    // console.log(jsonData.dataList)
+    // console.log(this.data.recommond)
     // wx.request({
     //   url: 'http://123.56.220.217:3031/list',
     //   header: {

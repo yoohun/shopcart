@@ -122,6 +122,12 @@ Page({
       })
     }
   },
+  toBuyList() {
+    wx.navigateTo({
+      url: '../buylist/buylist'
+    })
+    console.log(111)
+  },
   onShow :function(){
     if (app.globalData.shoppingCart.length != '0') {
       this.setData({

@@ -1,5 +1,4 @@
 <wxs module="filters" src="../../utils/desw.wxs"></wxs>
-
 <view class='contain'>
   <view class='detail'>
     <view class='imgScroll'>
@@ -14,7 +13,10 @@
     <view class='product'>
       <view class='title'>{{pro.title}}
       </view>
-      <view class='price'>￥{{pro.price}}</view>
+      <view class='productPAN'>
+        <text class='price'>￥{{pro.price}}</text>
+        <text class='productName'>{{pro.shopName}}</text>
+      </view>
       <view class='message'>
         <text>快递：￥{{filters.toFix(pro.youfei)}}</text>
         <text>{{pro.place}}</text>
@@ -67,8 +69,6 @@
         <view class='right'>
           <view class='buyPrice'>
           <text>￥{{filters.toFix(pro.price*pro.buynum)}}</text>
-          <text>销量{{pro.sellNum}}件</text>
-          <text>商品编码</text>
         </view>
         <view>
           <icon catchtap='closeTap' class='iconfont icon-shanchu3'></icon>

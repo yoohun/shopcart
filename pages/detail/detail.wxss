@@ -33,12 +33,30 @@ swiper{
   font-size: 34rpx;
   line-height: 48rpx;
 }
-.product .price{
+.product .productPAN{
+  display: flex;
+  justify-content: space-between
+}
+.product .productPAN .price{
   color: red;
   padding: 0 20rpx;
   box-sizing: border-box;
   font-size: 36rpx;
   margin: 20rpx 0
+}
+.product .productPAN .productName{
+  width: 70%;
+  padding: 0 8rpx;
+  margin-right: 20rpx;
+  box-sizing: border-box;
+  display: inline-block;
+  color: black;
+  font-size: 34rpx;
+  margin: 20rpx 0;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  text-align: right;
 }
 .product .message{
   display: flex;
@@ -218,35 +236,31 @@ background: rgba(248, 19, 19, 0.774)
 }
 .burDes{
   display: flex;
-  padding: 0 20rpx 20rpx;
-  box-sizing: border-box;
-  border-top: 1rpx solid gainsboro;
-  /* height: 170rpx */
+  padding: 0rpx 20rpx 20rpx;
+  border-top: 1rpx solid rgb(202, 202, 202);
+  box-sizing: border-box；
+}
+.burDes .right{
+  display: flex
 }
 .burDes .iconfont{
   font-size: 44rpx;
   color: red;
   margin-top: 4rpx;
 }
-.burDes .right{
-  display: flex;
-  margin-left: 35rpx;
-  padding-top: 20rpx;
-  box-sizing: border-box
-}
 .buyImg{
   width: 140rpx;
   height: 140rpx;
   background: red;
   border-radius: 10rpx;
-  margin-top: -40rpx;
+  margin-top: -50rpx;
   margin-left: 20rpx;
   margin-right: 40rpx;
   overflow: hidden
 }
 .buyImg image{
-  width: 150rpx;
-  height: 150rpx;
+  width: 140rpx;
+  height: 140rpx;
 }
 .buyPrice{
   flex: 1
@@ -255,10 +269,11 @@ background: rgba(248, 19, 19, 0.774)
   display: block;
   font-size: 30rpx;
   color: black;
-  line-height: 50rpx;
-  text-align: left
+  line-height: 102rpx;
+  text-align: left;
+  margin-left: 20rpx;
 }
 .buyPrice text:first-child{
   color: red;
-  font-size: 34rpx;
+  font-size: 38rpx;
 }

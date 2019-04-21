@@ -48,7 +48,7 @@
         </checkbox-group>
         <text class='allMoney'>合计：{{filters.toFix(allMoney)}}元</text>
       </view>
-      <view class='settlement'>
+      <view class='settlement' bindtap='toBuyList'>
         去结算 
       </view>
     </view>

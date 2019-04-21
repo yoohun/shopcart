@@ -1,0 +1,198 @@
+.buyList{
+  width: 100%;
+  background: gainsboro;
+  box-sizing: border-box;
+  padding: 20rpx 20rpx 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.buyList view{
+  margin-bottom: 30rpx;
+  border-radius: 20rpx;
+  background: white;
+  padding: 20rpx;
+}
+.buyList .address{
+  padding:  20rpx 20rpx 0;
+  display: flex;
+  justify-content: space-between;
+}
+.buyList .address .addressWZ{
+  width: 70rpx;
+  margin: auto 0;
+  height: 70rpx;
+  border-radius: 35rpx;
+  background: orangered;
+  display: inline-block;
+  text-align: center;
+  line-height: 70rpx;
+  padding: 0
+}
+.buyList .address .addressWZ .iconfont{
+  color: white;
+  font-size: 50rpx;
+}
+.buyList .address .choseAddress{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  margin-left: 20rpx;
+  box-sizing: border-box;
+  width: 50%;
+}
+.buyList .address .choseAddress>text{
+  display: block;
+  margin-bottom: 20rpx;
+  width: 100%;
+  text-align: left;
+  font-size: 28rpx;
+  margin-left: 10rpx;
+  box-sizing: border-box
+}
+.buyList .address .choseAddress .telphone{
+  color: rgb(182, 182, 182);
+  font-size: 24rpx;
+  display: inline-block
+}
+.buyList .address .choseAddress .detailAddress{
+  width: 100%;
+  overflow: hidden;
+  text-overflow:ellipsis; 
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  border: 1rpx solid red;
+  font-size: 24rpx;
+}
+.buyList .address .choseAddress>text:last-child{
+  color: orange;
+  margin-bottom: 0;
+  font-size: 22rpx;
+}
+.buyList .address .other{
+  width: 50rpx;
+  text-align: center;
+  margin: auto 0;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.buyList .address .other .iconfont{
+  color: gainsboro;
+  font-size: 30rpx;
+}
+.allproduct{
+  background: white;
+  border-radius: 20rpx;
+  padding: 20rpx;
+}
+.delivery{
+
+}
+.allproduct .other{
+  padding: 26rpx;
+}
+.allproduct .other view{
+  padding: 0;
+  margin: 15rpx 0;
+}
+.allproduct .other .otherItem{
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  font-size: 24rpx;
+}
+.allproduct .other .buyNum{
+  display: flex;
+  align-items: center
+}
+.allproduct .other .buyNum text{
+  display: inline-block;
+}
+.allproduct .other .otherRight view{
+  border-radius: 10rpx;
+}
+.allproduct .other .otherLeft text:nth-child(2){
+  margin-left: 16rpx;
+  color: rgb(199, 199, 199)
+}
+.allproduct .other .otherRight .iconfont{
+  font-size: 20rpx;
+  color: rgb(199, 199, 199);
+  margin-left: 15rpx;
+}
+.addPlues{
+  border: 1rpx solid rgb(180, 180, 180);
+  border-radius: 4rpx;
+  margin: auto;
+}
+.addPlues text{
+  line-height: 46rpx;
+  display: inline-block;
+  padding: 0 15rpx;
+  border-right: 1rpx solid rgb(180, 180, 180);
+}
+ .addPlues .lock{
+  color: rgb(207, 207, 207);
+}
+.addPlues text:nth-child(3){
+  border-right: none
+}
+.buyList .allMoney{
+  display: flex;
+  justify-content: flex-end;
+  color: black;
+  font-size: 24rpx;
+}
+.allMoney .num{
+  color: rgb(199, 199, 199);
+  font-size: 22rpx;
+  margin-right: 10rpx;
+}
+.allMoney .all text{
+  color: orangered;
+  font-size: 22rpx;
+}
+.buyList .jiesuan{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100rpx;
+  background: white;
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  align-items: center;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  color:black;
+  font-size: 24rpx;
+  margin-bottom: 0
+}
+.jiesuan .submit{
+  height: 70rpx;
+  padding: 0 26rpx ;
+  box-sizing: border-box;
+  color: white;
+  background: #f74c76;
+  border-radius: 35rpx;
+  line-height: 70rpx;
+  font-size: 28rpx;
+  margin-top: 5rpx;
+}
+.jiesuan .num{
+  color: rgb(199, 199, 199);
+  margin: 0 5rpx;
+  font-size: 22rpx
+}
+.jiesuan .all {
+  margin: 0 26rpx;
+}
+.jiesuan .all text{
+  color: orangered;
+  font-size: 32rpx
+}
