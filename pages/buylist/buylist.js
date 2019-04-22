@@ -5,7 +5,21 @@ const app = getApp()
 
 Page({
   data: {
-    show:false
+    num: 1,
+    buything:[],
+    simple: false
+  },
+  add () {
+    this.setData({
+      num: ++this.buything[0].num
+    })
+  },
+  pls () {
+    if(this.data.num!=1) {
+      this.setData({
+        num: --this.buything[0].num
+      })
+    }
   },
   onLoad: function (option) {
     this.setData({
@@ -13,6 +27,10 @@ Page({
         return util.formatTime(new Date(log))
       }),
       recommond: jsonData.dataList
+    })
+    this.setData({
+      buything: app.globalData.buyList,
+      simple: app.globalData.simple
     })
   }
 })

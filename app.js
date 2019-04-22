@@ -36,8 +36,11 @@ App({
     })
   },
   globalData: {
+    simple: false,
     userInfo: {},
+    userAddress: {},
     shoppingCart:[],
+    buyList:[],
     proList: [{
       id: 'ys01',
       title: 'ytfguygugu',

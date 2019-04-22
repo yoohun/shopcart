@@ -52,6 +52,7 @@ Page({
     })
   },
   selectIt:function(o){
+    console.log(o)
     var money = 0
     let len = o.detail.value.length
     if(o.detail.value.length!=0){
@@ -123,6 +124,7 @@ Page({
     }
   },
   toBuyList() {
+
     wx.navigateTo({
       url: '../buylist/buylist'
     })

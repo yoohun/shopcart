@@ -14,7 +14,7 @@
           <view class='shopItem'    wx:for='{{shopLists}}' data-id="{{item.id}}" wx:key='{{item.id}}'>
             <label class="checkbox">
               <view class='left'> 
-                <checkbox value="{{filters.toFix(item.price*item.num)}}" class='checkIcon' checked="{{item.checked}}"/>
+                <checkbox value="{{filters.toFix(item.price*item.num)}}" data-id='{{item.id}}' class='checkIcon' checked="{{item.checked}}"/>
                 <view class='checkImage'>
                   <image src='{{item.imgUrl}}' mode='widthFix'></image>
                 </view>

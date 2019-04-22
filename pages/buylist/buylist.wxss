@@ -2,21 +2,16 @@
   width: 100%;
   background: gainsboro;
   box-sizing: border-box;
-  padding: 20rpx 20rpx 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  padding: 20rpx 20rpx 300rpx;
 }
-.buyList view{
+.buyList>view{
   margin-bottom: 30rpx;
   border-radius: 20rpx;
   background: white;
   padding: 20rpx;
 }
 .buyList .address{
-  padding:  20rpx 20rpx 0;
+  padding:  20rpx ;
   display: flex;
   justify-content: space-between;
 }
@@ -40,9 +35,9 @@
   flex-direction: column;
   justify-content: space-between;
   flex: 1;
-  margin-left: 20rpx;
   box-sizing: border-box;
   width: 50%;
+  padding-left: 10rpx;
 }
 .buyList .address .choseAddress>text{
   display: block;
@@ -58,20 +53,23 @@
   font-size: 24rpx;
   display: inline-block
 }
-.buyList .address .choseAddress .detailAddress{
+/* .buyList .address .choseAddress .detailAddress,.proItemContent .detailAddress{
   width: 100%;
   overflow: hidden;
   text-overflow:ellipsis; 
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  border: 1rpx solid red;
   font-size: 24rpx;
-}
+  margin-bottom: 10rpx;
+} */
 .buyList .address .choseAddress>text:last-child{
   color: orange;
   margin-bottom: 0;
   font-size: 22rpx;
+}
+.proItemContent text{
+  margin: 10rpx 0;
 }
 .buyList .address .other{
   width: 50rpx;
@@ -89,11 +87,68 @@
   border-radius: 20rpx;
   padding: 20rpx;
 }
-.delivery{
-
+.allproduct .proList{
+  padding: 10rpx;
+}
+.allproduct .proItem{
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  margin-bottom: 20rpx;
+  width: 100%;
+}
+.proItemImg{
+  width: 30%;
+}
+.allproduct .proItem image{
+  /* max-width: 200rpx; */
+  /* min-width: 80rpx; */
+  width: 100%;
+  /* width: 140rpx; */
+  /* margin-right:20rpx; */
+}
+.proItemContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 20rpx;
+  padding-left:20rpx;
+  flex: 1
+}
+.proItemContent .ell{
+  font-size: 24rpx;
+  width: 100%;
+  /* height: 100rpx; */
+  word-break:break-all;
+  overflow: hidden;
+  text-overflow:ellipsis; 
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-bottom: 10rpx;
+}
+.allproduct .proItemContent>text:nth-child(2){
+  color: rgb(199, 199, 199)
+}
+.allproduct .proItem:last-child text:last-child{
+  color: orangered;
+  font-size: 20rpx;
+}
+.allproduct .proItem .price{
+  padding-left: 20rpx;
+  font-size: 20rpx
+}
+.allproduct .proItem .price text{
+  display: block;
+  text-align: right;
+  line-height: 40rpx;
+}
+.allproduct .proItem .price text:last-child{
+  color: rgb(199, 199, 199)
 }
 .allproduct .other{
-  padding: 26rpx;
+  padding: 0 26rpx 26rpx;
 }
 .allproduct .other view{
   padding: 0;
@@ -136,7 +191,7 @@
   border-right: 1rpx solid rgb(180, 180, 180);
 }
  .addPlues .lock{
-  color: rgb(207, 207, 207);
+  color: rgb(184, 184, 184);
 }
 .addPlues text:nth-child(3){
   border-right: none
@@ -171,7 +226,8 @@
   box-sizing: border-box;
   color:black;
   font-size: 24rpx;
-  margin-bottom: 0
+  margin-bottom: 0;
+  border-radius: 0
 }
 .jiesuan .submit{
   height: 70rpx;
@@ -181,7 +237,7 @@
   background: #f74c76;
   border-radius: 35rpx;
   line-height: 70rpx;
-  font-size: 28rpx;
+  font-size: 26rpx;
   margin-top: 5rpx;
 }
 .jiesuan .num{
@@ -194,5 +250,5 @@
 }
 .jiesuan .all text{
   color: orangered;
-  font-size: 32rpx
+  font-size: 28rpx
 }

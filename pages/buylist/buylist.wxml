@@ -15,17 +15,31 @@
   </view>
   <view class='allproduct'>
     <view class='proList'>
+      <view class='proItem' wx:for='{{buything}}' wx:key='{{item.id}}'>
+        <view class='proItemImg'>
+          <image src='{{item.imgUrl}}' mode='widthFix'></image>
+        </view>
+        <view class='proItemContent'>
+          <view class='ell'>{{item.name}}</view>
+          <text>颜色分类:</text>
+          <text>发货时间：卖家承诺七天</text>
+        </view>
+        <view class='price'>
+          <text>￥{{item.price}}</text>
+          <text>x{{item.num}}</text>
+        </view>
+      </view>
     </view>
     <view class='other'>
-      <view class='otherItem' wx:if='{{show}}'>
+      <view class='otherItem' wx:if='{{simple}}'>
         <view class='otherLeft buyNum'>
           <text>购买数量</text>
         </view>
         <view class='otherRight'>
           <view class='addPlues'>
-          <text >-</text>
-          <text>1</text>
-          <text>+</text>
+          <text bindtap='pls'  class="{{num>1?'':'lock'}}">-</text>
+          <text>{{buything[0].num}}</text>
+          <text bindtap='add'>+</text>
         </view>
         </view>
       </view>
