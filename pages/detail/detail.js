@@ -50,9 +50,9 @@ Page({
       'num': 1,
       'price': this.data.pro.price
     }
-    let list = app.globalData.buyList.push(buyThing)
+    app.globalData.buyList.push(buyThing)
     this.setData({
-      buyList: list,
+      // buyList: list,
       simple: true
     })
     wx.navigateTo({

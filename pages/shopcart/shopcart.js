@@ -13,7 +13,8 @@ Page({
     selectList:[],
     allSelect:{
       'checked': false
-    }
+    },
+    buylist: []
   },
   toShopping() {
     wx.switchTab({
@@ -52,17 +53,29 @@ Page({
     })
   },
   selectIt:function(o){
-    console.log(o)
-    var money = 0
-    let len = o.detail.value.length
-    if(o.detail.value.length!=0){
-      for(let i=0; i<len; i++) {
-        money = money + parseFloat(o.detail.value[i])
+    let money = 0;
+    let arr = o.detail.value
+    let that = this
+    let chosedArr = []
+    let len = chosedArr.length
+    if (arr.length!=0){
+      for (let i = 0; i < arr.length; i++) {
+        that.data.shopLists.filter(item => {
+          if (item.id == arr[i]) {
+            chosedArr.push(item)
+            money = money + parseFloat(item.num * item.price)
+          }
+        })
       }
+      // console.log(chosedArr)
+      // app.globalData.buyList = chosedArr
+      // var a = app.globalData.buyList
       this.setData({
-        allMoney: money
+        allMoney: money,
+        buylist: chosedArr
       })
-      if (len == this.data.length) {
+      // console.log(app.globalData.buyList)
+      if (chosedArr.length == this.data.length) {
         this.setData({
           allSelect: {
             'checked': true
@@ -83,6 +96,76 @@ Page({
         }
       })
     }
+    this.setData({
+      buyList: app.globalData.buyList
+    })
+    // console.log(o)
+    // let money = 0;
+    // let arr= o.detail.value
+    // let that = this
+    // let chosedArr=[]
+    // let len = chosedArr.length
+    // for(let i=0;i<arr.length;i++){
+    //   that.data.shopLists.filter(item=>{
+    //     if(item.id == arr[i]){
+    //       console.log(item)
+    //       chosedArr.push(item)
+    //     }
+    //   })
+    // }
+    // console.log(chosedArr)
+    // if(len!=0) {
+    //   for (let i = 0; i < chosedArr.length; i++) {
+    //     money = money + parseFloat(chosedArr[i].num * chosedArr[i].price)
+    //   }
+    //   this.setData({
+    //     allMoney: money
+    //   })
+    //   if (len == this.data.length) {
+    //     this.setData({
+    //       allSelect: {
+    //         'checked': true
+    //       }
+    //     })
+    //   } else {
+    //     this.setData({
+    //       allSelect: {
+    //         'checked': false
+    //       }
+    //     })
+    //   }
+    // }
+    
+    // var money = 0
+    // let len = o.detail.value.length
+    // if(o.detail.value.length!=0){
+    //   for(let i=0; i<len; i++) {
+    //     money = money + parseFloat(o.detail.value[i])
+    //   }
+    //   this.setData({
+    //     allMoney: money
+    //   })
+    //   if (len == this.data.length) {
+    //     this.setData({
+    //       allSelect: {
+    //         'checked': true
+    //       }
+    //     })
+    //   } else {
+    //     this.setData({
+    //       allSelect: {
+    //         'checked': false
+    //       }
+    //     })
+    //   }
+    // } else{
+    //   this.setData({
+    //     allMoney: 0,
+    //     allSelect: {
+    //       'checked': false
+    //     }
+    //   })
+    // }
   },
   checkboxChange:function(o){
     var arr = this.data.shopLists
@@ -123,12 +206,15 @@ Page({
       })
     }
   },
-  toBuyList() {
-
+  toBuyList() {this.data.buylist
+    app.globalData.buyList = this.data.buylist
+    this.setData({
+      simple: false
+    })
+    console.log(app.globalData.buyList)
     wx.navigateTo({
       url: '../buylist/buylist'
     })
-    console.log(111)
   },
   onShow :function(){
     if (app.globalData.shoppingCart.length != '0') {
@@ -146,6 +232,7 @@ Page({
         shopCart: false
       })
     }
+    // console.log(app.globalData.shoppingCart)
   },
   onLoad: function () {
     this.setData({

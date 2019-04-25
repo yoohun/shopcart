@@ -1,0 +1,67 @@
+.addressList{
+  padding: 0 10rpx 20rpx;
+}
+.addressItem{
+  display: flex;
+  justify-content: space-between;
+  margin: 35rpx 0;
+  border: 1rpx solid red;
+  box-sizing: border-box
+}
+.addressItem .left{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 35rpx;
+  text-align: center;
+  margin: auto;
+  background: #f74c76;
+  box-sizing: border-box;
+}
+.addressItem .iconfont{
+  font-size: 34rpx;
+  line-height: 70rpx;
+  color: white
+}
+.addressItem .middle{
+  flex: 1;
+  box-sizing: border-box;
+  margin: 0 10rpx;
+  border: 1rpx saddlebrown solid;
+  padding-right: 20rpx;
+  display: flex;
+  flex-direction: column;
+  color: rgb(37, 37, 37);
+  font-size: 30rpx;
+  padding-left: 15rpx;
+}
+.middle .number{
+  color: rgb(192, 192, 192);
+  font-size: 24rpx;
+  margin: 0 20rpx;
+}
+.middle .addres{
+  font-size: 28rpx;
+}
+.addressItem .right{
+  /* width: 120rpx; */
+  line-height: 70rpx;
+  border-left: 1rpx solid gainsboro;
+  text-align: center;
+  color: rgb(192, 192, 192);
+  font-size: 26rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-content: center
+}
+
+
+.addNew{
+  width: 100%;
+  background: #f74c76;
+  color: white;
+  line-height: 90rpx;
+  height: 90rpx;
+  font-size: 40rpx;
+  text-align: center
+}

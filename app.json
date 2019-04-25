@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/shopcart/shopcart",
     "pages/detail/detail",
-    "pages/buylist/buylist"
+    "pages/buylist/buylist",
+    "pages/place/place"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -21,7 +22,7 @@
         "selectedIconPath": "imgs/indexSelected.png"
       },
       {
-        "pagePath": "pages/shopcart/shopcart",
+        "pagePath": "pages/place/place",
         "text": "购物车",
         "iconPath": "imgs/car.png",
         "selectedIconPath": "imgs/carSelected.png"

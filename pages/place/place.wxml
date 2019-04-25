@@ -1,0 +1,48 @@
+<view class="address">
+  <view class='addressList'>
+    <view class='addressItem'>
+      <view class='left'>
+        <text class='iconfont icon-weizhi'></text>
+      </view>
+      <view class='middle'>
+        <text class='name'>吴世勋 <text class='number'>12312312312</text> </text>
+        <text class='addres'>广东省汕头市濠江区濠江花园3期啊啊啊啊啊啊啊啊啊啊啊啊</text>
+      </view>
+      <view class='right'>sdas</view>
+    </view>
+    <view class='addressItem'>
+      <view class='left'>
+        <text class='iconfont icon-weizhi'></text>
+      </view>
+      <view class='middle'>
+        <text class='name'>吴世勋 <text class='number'>12312312312</text> </text>
+        <text class='addres'>广东省汕头市濠江区濠江花园3期啊啊啊啊啊啊啊啊啊啊啊啊</text>
+      </view>
+      <view class='right'>sdas</view>
+    </view>
+    <view class='addressItem'>
+      <view class='left'>
+        <text class='iconfont icon-weizhi'></text>
+      </view>
+      <view class='middle'>
+        <text class='name'>吴世勋 <text class='number'>12312312312</text> </text>
+        <text class='addres'>广东省汕头市濠江区濠江花园3期啊啊啊啊啊啊啊啊啊啊啊啊</text>
+      </view>
+      <view class='right'>sdas</view>
+    </view>
+  </view>
+  <view class='addNew'>添加新地址</view>
+  <view  >
+    <picker
+      mode="region"
+      bindchange="bindRegionChange"
+      value="{{region}}"
+      custom-item="{{customItem}}"
+    >
+      <view class="picker" wx:show="{{show}}">
+        当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
+      </view>
+    </picker>
+  </view>
+  
+</view>

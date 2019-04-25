@@ -21,16 +21,20 @@ Page({
       })
     }
   },
+  onShow: function (option) {
+    this.setData({
+      buything: app.globalData.buyList,
+      simple: app.globalData.simple
+    })
+    console.log(app.globalData.buyList)
+    console.log(this.data.buything)
+  },
   onLoad: function (option) {
     this.setData({
       logs: (wx.getStorageSync('logs') || []).map(log => {
         return util.formatTime(new Date(log))
       }),
       recommond: jsonData.dataList
-    })
-    this.setData({
-      buything: app.globalData.buyList,
-      simple: app.globalData.simple
     })
   }
 })

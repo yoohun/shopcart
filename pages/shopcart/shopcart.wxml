@@ -14,7 +14,8 @@
           <view class='shopItem'    wx:for='{{shopLists}}' data-id="{{item.id}}" wx:key='{{item.id}}'>
             <label class="checkbox">
               <view class='left'> 
-                <checkbox value="{{filters.toFix(item.price*item.num)}}" data-id='{{item.id}}' class='checkIcon' checked="{{item.checked}}"/>
+                <!-- <checkbox value="{{filters.toFix(item.price*item.num)}}" data-id='{{item.id}}' class='checkIcon' checked="{{item.checked}}"/> -->
+                <checkbox value="{{item.id}}" data-id='{{item.id}}' class='checkIcon' checked="{{item.checked}}"/>
                 <view class='checkImage'>
                   <image src='{{item.imgUrl}}' mode='widthFix'></image>
                 </view>
@@ -44,9 +45,9 @@
           <label class="checkbox">
             <checkbox  value="allSelected" checked='{{allSelect.checked}}'/>
               全选
+            <text class='allMoney'>合计：{{filters.toFix(allMoney)}}元</text>
           </label>
         </checkbox-group>
-        <text class='allMoney'>合计：{{filters.toFix(allMoney)}}元</text>
       </view>
       <view class='settlement' bindtap='toBuyList'>
         去结算 
