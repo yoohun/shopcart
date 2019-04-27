@@ -1,0 +1,30 @@
+<view class='editAddress'>
+  <view class='address'
+  >
+    <view class='name'>
+      <input class='nameIpt' focus="{{inputShowed}}" type='text' value='{{name}}' placeholder='收货人' ></input>
+      <text class='iconfont icon-tongxunlu'></text>
+    </view>
+    <view class='number name'>
+      <input type='number' value='{{number}}' placeholder='手机号码' class='nameIpt numberIpt' focus='{{numberShow}}' ></input>
+      <text>+86</text>
+    </view>
+    <view class="section">
+      <picker
+        mode="region"
+        bindchange="bindRegionChange"
+        value="{{region}}"
+        class='name'
+        
+      >
+          {{region[0]}} {{region[1]}} {{region[2]}}
+      </picker>
+    </view>
+    <view class='name fullAddress'>
+        <textarea value='{{region[0]}}{{region[1]}}{{region[2]}}{{fulladdress}}' focus='addressShow' placeholder='具体门牌号地址信息' maxlength='-1'>
+          
+        </textarea>
+    </view>
+  </view>
+  <text class='deleteAddress'>删除收货地址</text>
+</view>

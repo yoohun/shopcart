@@ -5,7 +5,6 @@
   display: flex;
   justify-content: space-between;
   margin: 35rpx 0;
-  border: 1rpx solid red;
   box-sizing: border-box
 }
 .addressItem .left{
@@ -26,13 +25,15 @@
   flex: 1;
   box-sizing: border-box;
   margin: 0 10rpx;
-  border: 1rpx saddlebrown solid;
   padding-right: 20rpx;
   display: flex;
   flex-direction: column;
   color: rgb(37, 37, 37);
   font-size: 30rpx;
   padding-left: 15rpx;
+}
+.addressItem .middle .name{
+  margin-bottom: 5rpx;
 }
 .middle .number{
   color: rgb(192, 192, 192);
@@ -43,16 +44,19 @@
   font-size: 28rpx;
 }
 .addressItem .right{
-  /* width: 120rpx; */
-  line-height: 70rpx;
-  border-left: 1rpx solid gainsboro;
-  text-align: center;
   color: rgb(192, 192, 192);
-  font-size: 26rpx;
-  padding: 0 30rpx;
+  font-size: 28rpx;
   box-sizing: border-box;
   display: flex;
-  align-content: center
+  justify-content: center;
+  align-items: center;
+}
+.addressItem .right>text{
+  border-left: 1rpx solid gainsboro;
+  padding: 0 30rpx;
+  margin: auto;
+  display: block
+
 }
 
 

@@ -1,8 +1,9 @@
+page{
+  background: gainsboro
+}
 .buyList{
-  width: 100%;
-  background: gainsboro;
   box-sizing: border-box;
-  padding: 20rpx 20rpx 300rpx;
+  padding: 20rpx;
 }
 .buyList>view{
   margin-bottom: 30rpx;

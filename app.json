@@ -5,7 +5,8 @@
     "pages/shopcart/shopcart",
     "pages/detail/detail",
     "pages/buylist/buylist",
-    "pages/place/place"
+    "pages/place/place",
+    "pages/address/address"
   ],
   "window":{
     "backgroundTextStyle":"light",

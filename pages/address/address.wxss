@@ -1,0 +1,64 @@
+page{
+  background: gainsboro
+}
+
+.address{
+  background: white;
+  box-sizing: border-box;
+  margin-bottom: 50rpx;
+}
+.address .name{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 26rpx;
+  border-bottom: 1rpx solid rgb(170, 170, 170);
+  padding: 20rpx;
+  color: rgb(46, 45, 45);
+}
+.address .nameIpt{
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 26rpx;
+}
+.address .iconfont{
+  font-size: 46rpx;
+  color: rgb(82, 82, 82)
+}
+.address>view{
+  padding: 0 20rpx;
+}
+.numberIpt{
+  width: 100%;
+}
+.address .fullAddress{
+  border-bottom: none;
+  display: block;
+}
+.address .fullAddress>textarea{
+  min-height: 60rpx;
+  max-height: 160rpx;
+  width: 100%;
+}
+.address .section{
+  padding: 0;
+}
+.address .section picker{
+  height: 60rpx;
+}
+.address .section .name>view{
+  width: 100%;
+  display: block;
+  color: rgb(46, 45, 45);
+}
+
+
+.deleteAddress{
+  display: inline-block;
+  line-height: 90rpx;
+  color: red;
+  padding: 0 20rpx;
+  font-size: 30rpx;
+  background: white;
+  width: 100%;
+}
