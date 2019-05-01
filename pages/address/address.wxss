@@ -1,5 +1,5 @@
 page{
-  background: gainsboro
+  background: rgb(240, 240, 240)
 }
 
 .address{
@@ -46,10 +46,26 @@ page{
 .address .section picker{
   height: 60rpx;
 }
-.address .section .name>view{
+.address .section .name{
   width: 100%;
   display: block;
+  position: relative;
+  left:0;
+  top:0;
+  box-sizing: border-box;
+  height: 85rpx;
+}
+.address .section .name .place{
+  width: 100%;
   color: rgb(46, 45, 45);
+  position: absolute;
+  left:0;
+  top:0;
+  padding:0 20rpx;
+  box-sizing: border-box;
+  line-height: 85rpx;
+  height: 85rpx;
+  
 }
 
 
@@ -61,4 +77,10 @@ page{
   font-size: 30rpx;
   background: white;
   width: 100%;
+}
+.sureAddress{
+  background: #f74c76;
+  color: white;
+  text-align: center;
+  margin-bottom: 50rpx;
 }

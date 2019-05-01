@@ -36,6 +36,31 @@ App({
     })
   },
   globalData: {
+    userAdderssInfo: [{
+      'name': '吴世勋',
+      'number': 12312314,
+      'city': ['广东省', '广州市', '越秀区'],
+      'otheraddress': '濠江花园1期',
+      'id': 'address01'
+    }, {
+        'name': 'a吴世勋',
+        'number': 12312314,
+        'city': ['广东省', '汕头市', '濠江区'],
+        'otheraddress': '濠江花园2期',
+        'id': 'address02'
+      }, {
+        'name': '世勋',
+        'number': 23523423412,
+        'city': ['广东省', '汕头市', '龙湖区'],
+        'otheraddress': '濠江花园3期',
+        'id': 'address03'
+      }, {
+        'name': 'oh世勋',
+        'number': 6435325,
+        'city': ['广东省', '深圳市', '龙华区'],
+        'otheraddress': '濠江花园4期',
+        'id': 'address04'
+      }],
     simple: false,
     userInfo: {},
     userAddress: {},

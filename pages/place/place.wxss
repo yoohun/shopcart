@@ -34,6 +34,7 @@
 }
 .addressItem .middle .name{
   margin-bottom: 5rpx;
+  line-height: 44rpx;
 }
 .middle .number{
   color: rgb(192, 192, 192);
@@ -42,6 +43,8 @@
 }
 .middle .addres{
   font-size: 28rpx;
+  line-height:40rpx;
+
 }
 .addressItem .right{
   color: rgb(192, 192, 192);
@@ -52,10 +55,11 @@
   align-items: center;
 }
 .addressItem .right>text{
-  border-left: 1rpx solid gainsboro;
+  border-left: 1rpx solid rgb(107, 107, 107);
   padding: 0 30rpx;
   margin: auto;
-  display: block
+  display: block;
+  color: rgb(107, 107, 107)
 
 }
 
@@ -68,4 +72,28 @@
   height: 90rpx;
   font-size: 40rpx;
   text-align: center
+}
+
+.editView{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.editView>view{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: rgb(83, 83, 83);
+}
+.editView>view>text{
+  display: block;
+  line-height: 80rpx;
+  text-align: center;
+  background: white;
+  border-bottom:1rpx solid rgb(192, 192, 192);
+  font-size: 30rpx; 
 }

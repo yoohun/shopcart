@@ -1,41 +1,23 @@
 <view class="address">
   <view class='addressList'>
-    <view class='addressItem'>
+    <view class='addressItem' wx:for='{{userAdderssInfo}}' wx:key='{{item.id}}'>
       <view class='left'>
         <text class='iconfont icon-weizhi'></text>
       </view>
       <view class='middle'>
-        <text class='name'>吴世勋 <text class='number'>12312312312</text> </text>
-        <text class='addres'>广东省汕头市濠江区濠江花园3期啊啊啊啊啊啊啊啊啊啊啊啊</text>
+        <text class='name'>{{item.name}}<text class='number'>{{item.number}}</text> </text>
+        <text class='addres'>{{item.city[0]}}{{item.city[1]}}{{item.city[2]}}{{item.otheraddress}}</text>
       </view>
-      <view class='right' bindtap='edit'>
-        <text>编辑</text>
-      </view>
-    </view>
-    <view class='addressItem'>
-      <view class='left'>
-        <text class='iconfont icon-weizhi'></text>
-      </view>
-      <view class='middle'>
-        <text class='name'>吴世勋 <text class='number'>12312312312</text> </text>
-        <text class='addres'>广东省汕头市濠江区濠江花园3期啊啊啊啊啊啊啊啊啊啊啊啊</text>
-      </view>
-      <view class='right' bindtap='edit'>
-        <text>编辑</text>
-      </view>
-    </view>
-    <view class='addressItem'>
-      <view class='left'>
-        <text class='iconfont icon-weizhi'></text>
-      </view>
-      <view class='middle'>
-        <text class='name'>吴世勋 <text class='number'>12312312312</text> </text>
-        <text class='addres'>广东省汕头市濠江区濠江花园3期啊啊啊啊啊啊啊啊啊啊啊啊</text>
-      </view>
-      <view class='right' bindtap='edit'>
+      <view class='right' bindtap='edit' data-id='{{item.id}}'>
         <text>编辑</text>
       </view>
     </view>
   </view>
-  <view class='addNew'>添加新地址</view>  
+  <view class='addNew' bindtap='addAddress'>添加新地址</view>
+  <view class='editView' wx:if='{{openEdit}}' catchtap='closeEdit'>
+    <view> 
+      <text data-id='a' bindtap='choseEdit'>修改地址</text>
+      <text data-id='b' bindtap='choseEdit'>删除地址</text>
+    </view>
+  </view> 
 </view>

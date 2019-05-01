@@ -2,29 +2,32 @@
   <view class='address'
   >
     <view class='name'>
-      <input class='nameIpt' focus="{{inputShowed}}" type='text' value='{{name}}' placeholder='收货人' ></input>
+      <input class='nameIpt' focus="{{inputShowed}}" type='text' value='{{addressInfor[0].name}}' placeholder='收货人' data-id='1' bindblur='dataChange'></input>
       <text class='iconfont icon-tongxunlu'></text>
     </view>
     <view class='number name'>
-      <input type='number' value='{{number}}' placeholder='手机号码' class='nameIpt numberIpt' focus='{{numberShow}}' ></input>
+      <input type='number' value='{{addressInfor[0].number}}' placeholder='手机号码' class='nameIpt numberIpt' focus='{{numberShow}}'  bindblur='dataChange' data-id='2'></input>
       <text>+86</text>
     </view>
     <view class="section">
       <picker
         mode="region"
-        bindchange="bindRegionChange"
-        value="{{region}}"
+        bindchange="dataChange"
+        value="{{addressInfor[0].city}}"
         class='name'
-        
+        data-id='3'
       >
-          {{region[0]}} {{region[1]}} {{region[2]}}
+         <view class='place' style="">
+          {{addressInfor[0].city[0]}}{{addressInfor[0].city[1]}}{{addressInfor[0].city[2]}}
+         </view>
+          
       </picker>
     </view>
     <view class='name fullAddress'>
-        <textarea value='{{region[0]}}{{region[1]}}{{region[2]}}{{fulladdress}}' focus='addressShow' placeholder='具体门牌号地址信息' maxlength='-1'>
-          
+        <textarea value='{{addressInfor[0].city[0]}}{{addressInfor[0].city[1]}}{{addressInfor[0].city[2]}}{{addressInfor[0].otheraddress}}' focus='addressShow'  maxlength='-1' bindinput="dataChange" data-id='4'>
         </textarea>
     </view>
   </view>
-  <text class='deleteAddress'>删除收货地址</text>
+  <text class='deleteAddress sureAddress' bindtap='sure'>确定</text>
+  
 </view>
