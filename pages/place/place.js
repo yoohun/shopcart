@@ -12,15 +12,18 @@ Page({
   },
   choseEdit(e) {
     console.log(e)
+    let that = this
     switch (e.target.dataset.id) {
       case 'a': 
-        console.log('修改')
         wx.navigateTo({
           url: '../address/address?addressid=' + this.data.choseId
         })
         break;
       default:
-        console.log('删除')
+        app.globalData.userAdderssInfo = app.globalData.userAdderssInfo.filter(item=>item.id!==this.data.choseId)
+        that.setData({
+          userAdderssInfo: app.globalData.userAdderssInfo
+        })
     }
   },
   edit(e) {
@@ -28,11 +31,6 @@ Page({
       openEdit: true,
       choseId: e.currentTarget.dataset.id
     })
-    console.log(e.currentTarget.dataset.id)
-    
-    // wx.navigateTo({
-    //   url: '../address/address'
-    // })
   },
   closeEdit () {
     this.setData({

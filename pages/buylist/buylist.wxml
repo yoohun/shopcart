@@ -1,12 +1,12 @@
 <wxs module="filters" src="../../utils/desw.wxs"></wxs>
 <view class='buyList'>
-  <view class='address'>
+  <view class='address' bindtap='toaddress'>
     <view class='addressWZ'>
       <text class='iconfont icon-weizhi'></text>
     </view>
     <view class='choseAddress'>
-      <text>吴世勋 <text class='telphone'>23423423</text> </text>
-    <text class='detailAddress'>广东省深圳市龙华区龙华街道大和路宝湖局1栋28a</text>
+      <text>{{addressInfor.name}} <text class='telphone'>{{addressInfor.number}}</text> </text>
+    <text class='detailAddress'>{{addressInfor.city[0]}}{{addressInfor.city[1]}}{{addressInfor.city[2]}}{{addressInfor.otheraddress}}</text>
       <text>收货不便时，可选择免费代收货服务</text>
     </view>
     <view class='other'>
@@ -62,12 +62,12 @@
     </view>
     <text class='allMoney'>
       <text class='num'>共1件</text>
-      <text class='all'>小计:<text> ￥filters.toFix(pro.youfei)</text></text>
+      <text class='all'>小计:<text> ￥{{filters.toFix(allmoney)}}</text></text>
     </text>
   </view>
   <view class='jiesuan'>
     <text class='num'>共1件</text>
-    <text class='all'>合计 <text>￥filters.toFix(pro.youfei)</text> </text>
+    <text class='all'>合计 <text>￥{{filters.toFix(allmoney)}}</text> </text>
     <text class='submit'>提交订单</text>
   </view>
 </view>

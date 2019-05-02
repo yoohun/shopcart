@@ -29,5 +29,6 @@
     </view>
   </view>
   <text class='deleteAddress sureAddress' bindtap='sure'>确定</text>
+  <text class='errtext' wx:if='{{falseText}}'>请将信息填写完毕</text>
   
 </view>

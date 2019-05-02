@@ -21,7 +21,7 @@ page{
   margin: auto 0;
   height: 70rpx;
   border-radius: 35rpx;
-  background: orangered;
+  background: #f74c76;
   display: inline-block;
   text-align: center;
   line-height: 70rpx;
@@ -65,7 +65,7 @@ page{
   margin-bottom: 10rpx;
 } */
 .buyList .address .choseAddress>text:last-child{
-  color: orange;
+  color: #f74c76;
   margin-bottom: 0;
   font-size: 22rpx;
 }
@@ -133,7 +133,7 @@ page{
   color: rgb(199, 199, 199)
 }
 .allproduct .proItem:last-child text:last-child{
-  color: orangered;
+  color: #f74c76;
   font-size: 20rpx;
 }
 .allproduct .proItem .price{
@@ -209,7 +209,7 @@ page{
   margin-right: 10rpx;
 }
 .allMoney .all text{
-  color: orangered;
+  color: #f74c76;
   font-size: 22rpx;
 }
 .buyList .jiesuan{
@@ -250,6 +250,6 @@ page{
   margin: 0 26rpx;
 }
 .jiesuan .all text{
-  color: orangered;
+  color: #f74c76;
   font-size: 28rpx
 }

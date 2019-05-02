@@ -9,24 +9,31 @@ Page({
   data: {
     addressInfor: [],
     inputShowed: false,
-    // name: '',
     numberShow: false,
-    // number: '',
-    // region: ['所在地区'],
-    // fulladdress: "",
-    addressShow: false
+    addressShow: false,
+    falseText: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   sure (e) {
+    if (this.data.addressInfor[0].city.length==1 || !this.data.addressInfor[0].name || !this.data.addressInfor[0].number) {
+      this.setData({
+        falseText: true
+      })
+      return 
+    }
+    console.log(1)
+    this.setData({
+      falseText: false
+    })
     let that = this
     let have= false
     app.globalData.userAdderssInfo.filter((item,index)=>{
       if (item.id == this.data.addressInfor[0].id) {
         app.globalData.userAdderssInfo[index] = this.data.addressInfor[0]
-        have = false
+        have = true
         return
       }
     })

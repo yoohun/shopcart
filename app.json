@@ -23,7 +23,7 @@
         "selectedIconPath": "imgs/indexSelected.png"
       },
       {
-        "pagePath": "pages/place/place",
+        "pagePath": "pages/shopcart/shopcart",
         "text": "购物车",
         "iconPath": "imgs/car.png",
         "selectedIconPath": "imgs/carSelected.png"

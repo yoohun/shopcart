@@ -5,9 +5,16 @@ const app = getApp()
 
 Page({
   data: {
-    num: 1,
+    // num: 1,
     buything:[],
-    simple: false
+    simple: false,
+    addressInfor:[],
+    allmoney: 0
+  },
+  toaddress () {
+    wx.navigateTo({
+      url: '../place/plcae'
+    })
   },
   add () {
     this.setData({
@@ -22,9 +29,14 @@ Page({
     }
   },
   onShow: function (option) {
+    let money = 0
+    app.globalData.buyList.forEach(item => {
+      money = money + parseFloat(item.num * item.price)
+    })
     this.setData({
       buything: app.globalData.buyList,
-      simple: app.globalData.simple
+      simple: app.globalData.simple,
+      allmoney: money
     })
     console.log(app.globalData.buyList)
     console.log(this.data.buything)
@@ -34,7 +46,9 @@ Page({
       logs: (wx.getStorageSync('logs') || []).map(log => {
         return util.formatTime(new Date(log))
       }),
-      recommond: jsonData.dataList
+      recommond: jsonData.dataList,
+      addressInfor: app.globalData.userAdderssInfo[1]
     })
+    
   }
 })
