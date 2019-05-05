@@ -17,6 +17,18 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked{
   color: white !important;
 }
 
+/* 单行文本 */
+.textSL{  
+  word-break:break-all;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient:vertical;
+  width: 100%; 
+}
+
+
 @font-face {font-family: "iconfont";
   src: url('iconfont.eot?t=1556247648079'); /* IE9 */
   src: url('iconfont.eot?t=1556247648079#iefix') format('embedded-opentype'), /* IE6-IE8 */

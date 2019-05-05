@@ -38,8 +38,8 @@ Page({
       simple: app.globalData.simple,
       allmoney: money
     })
-    console.log(app.globalData.buyList)
-    console.log(this.data.buything)
+    // console.log(app.globalData.buyList)
+    // console.log(this.data.buything)
   },
   onLoad: function (option) {
     this.setData({

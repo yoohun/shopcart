@@ -1,18 +1,20 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/logs/logs",
     "pages/shopcart/shopcart",
     "pages/detail/detail",
     "pages/buylist/buylist",
     "pages/place/place",
-    "pages/address/address"
+    "pages/address/address",
+    "pages/order/order",
+    "pages/orderpage/orderpage"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#f74c76",
-    "navigationBarTitleText": "购物车实例",
-    "navigationBarTextStyle":"white"
+    "navigationBarTitleText": "悦诗风吟商城",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "list": [
@@ -34,5 +36,4 @@
     "position": "bottom",
     "borderStyle": "black"
   }
-  
 }

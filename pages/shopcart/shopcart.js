@@ -30,7 +30,7 @@ Page({
         } else{
           return
         }
-        console.log(this.data.shopLists)
+        // console.log(this.data.shopLists)
       }
     })
     this.setData({
@@ -211,7 +211,7 @@ Page({
     this.setData({
       simple: false
     })
-    console.log(app.globalData.buyList)
+    // console.log(app.globalData.buyList)
     wx.navigateTo({
       url: '../buylist/buylist'
     })

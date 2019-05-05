@@ -68,7 +68,7 @@ App({
     buyList:[],
     proList: [{
       id: 'ys01',
-      title: 'ytfguygugu',
+      title: 'ytfgytfguyguguytfguyguguytfguyguguytfguyguguuygugu',
       imgUrls: [
         '../../imgs/xmnz.png',
         '../../imgs/xmnz1.png',
@@ -86,7 +86,7 @@ App({
       place: '上海'
     }, {
         id: 'ys02',
-        title: 'ytfguygugu',
+        title: 'ytfguyguguytfguyguguytfguyguguytfguyguguytfguyguguytfguygugu',
         imgUrls: [
           '../../imgs/lvcha.png',
           '../../imgs/lvcha2.png',
@@ -103,7 +103,7 @@ App({
         place: '上海'
       }, {
         id: 'ys03',
-        title: 'ytfguygugu',
+        title: 'yytfguyguguytfguyguguytfguyguguytfguyguguytfguygugutfguygugu',
         imgUrls: [
           '../../imgs/xmn.png',
           '../../imgs/xmn2.png',
@@ -120,7 +120,7 @@ App({
         place: '上海'
       }, {
         id: 'ys04',
-        title: 'ytfguygugu',
+        title: 'ytfgytfguyguguytfguyguguytfguyguguytfguyguguytfguyguguuygugu',
         imgUrls: [
           '../../imgs/purple.png',
           // '../../imgs/purple3.png',
@@ -137,7 +137,7 @@ App({
         place: '上海'
       }, {
         id: 'ys05',
-        title: 'ytfguygugu',
+        title: 'ytfgytfguyguguytfguyguguytfguyguguytfguyguguytfguyguguuygugu',
         imgUrls: [
           '../../imgs/xiang.png',
           '../../imgs/xiang2.png',
