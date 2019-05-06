@@ -13,7 +13,7 @@ Page({
   },
   toaddress () {
     wx.navigateTo({
-      url: '../place/plcae'
+      url: '../place/place'
     })
   },
   add () {

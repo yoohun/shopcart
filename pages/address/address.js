@@ -24,7 +24,7 @@ Page({
       })
       return 
     }
-    console.log(1)
+    // console.log(1)
     this.setData({
       falseText: false
     })
@@ -38,9 +38,9 @@ Page({
       }
     })
     if(!have) {
-      console.log('1231231' + this.data.addressInfor[0])
+      // console.log('1231231' + this.data.addressInfor[0])
       app.globalData.userAdderssInfo.push(this.data.addressInfor[0])
-      console.log(app.globalData.userAdderssInfo)
+      // console.log(app.globalData.userAdderssInfo)
     }
     wx.switchTab({
       url: '../place/place'
