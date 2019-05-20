@@ -1,3 +1,32 @@
 <view class='content'>
-  <view></view>
+  <view class='message'>
+    <view class='iconfont icon-weizhi'></view>
+    <view class='messageDetail'>
+      <view class='nameAphone'>吴世勋   
+        <text>15916484803</text>
+      </view>
+      <view>
+        dsfsds
+      </view>
+    </view>
+  </view>
+  <view class='detail'>
+    <view class='product'>
+      <view class='productTop flexview'>
+        <view class='productImg'>
+          <image src='../../imgs/carSelected.png' mode='widthFix'></image>
+        </view>
+        <view class='productTitle'>regregrgergregrgergrgerg</view>
+      </view> 
+      <view class='productClass'>
+        <view class='classList'>
+          <view class='flexview'>
+            <text>售后服务二房和无法</text>
+            <text class='redcolor'>￥60</text>
+          </view>
+          <view class='textRight'>x1</view>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>

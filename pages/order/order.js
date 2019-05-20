@@ -6,6 +6,12 @@ Page({
   data: {
     
   },
+  showMessage () {
+    console.log(111)
+    wx.navigateTo({
+      url: '../orderpage/orderpage'
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载

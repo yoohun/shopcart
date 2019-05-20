@@ -1,5 +1,5 @@
 page{
-  background: gainsboro
+  background: rgb(243, 243, 243)
 }
 .buyList{
   box-sizing: border-box;
@@ -252,4 +252,7 @@ page{
 .jiesuan .all text{
   color: #f74c76;
   font-size: 28rpx
+}
+.pinkcolor{
+  color: #f74c76;
 }

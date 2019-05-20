@@ -17,6 +17,16 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked{
   color: white !important;
 }
 
+
+.redcolor{
+  color: #f74c76
+}
+.flexview{
+  display: flex;
+  justify-content: space-between
+}
+
+
 /* 单行文本 */
 .textSL{  
   word-break:break-all;

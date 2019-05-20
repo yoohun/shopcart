@@ -9,7 +9,7 @@
   width: 47%;
   box-sizing: border-box;
   /* margin-bottom: 10rpx; */
-  margin: 0 1.5%
+  margin: 0 1.5% 30rpx
 }
 .itemImg{
   width: 100%;
@@ -18,12 +18,12 @@
   width: 100%
 }
 .itemText{
-  height:140rpx;
   box-sizing: border-box
 }
 .itemTitle{
   font-size: 34rpx;
   color: black;
+  word-break:break-all;
   overflow: hidden;
   text-overflow:ellipsis;
   display: -webkit-box;

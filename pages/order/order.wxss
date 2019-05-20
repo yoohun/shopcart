@@ -15,6 +15,7 @@ page{
 box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  padding: 20rpx 0;
 }
 .orderItemText{
   width: 76%;
@@ -22,6 +23,7 @@ box-sizing: border-box;
   justify-content: space-between;
   flex-direction: column;
   font-size: 30rpx;
+  height: 150rpx;
 }
 .orderItemText>view>view{
   margin: 5rpx 0
@@ -48,7 +50,30 @@ box-sizing: border-box;
 .orderItemImg image{
   width: 100%;
 }
-.total{
+.orderItemText .ordertitle{
+  width: 100%;
+  border: 1rpx solid red;
+  word-break:break-all;
+  overflow: hidden;
+  text-overflow:ellipsis; 
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.orderItemText .price{
   display: flex;
   justify-content: space-between
+}
+.total{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20rpx;
+  border-top: 1rpx solid rgb(228, 227, 227);
+  margin-top: 20rpx;
+}
+.total text{
+  font-size: 30rpx;
+}
+.total text:first-child{
+  color: rgb(197, 197, 197);
 }

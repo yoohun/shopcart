@@ -9,7 +9,8 @@ Page({
     buything:[],
     simple: false,
     addressInfor:[],
-    allmoney: 0
+    allmoney: 0,
+    allbuynum: 0
   },
   toaddress () {
     wx.navigateTo({
@@ -30,13 +31,16 @@ Page({
   },
   onShow: function (option) {
     let money = 0
+    let num = 0
     app.globalData.buyList.forEach(item => {
       money = money + parseFloat(item.num * item.price)
+      num = num + item.num
     })
     this.setData({
       buything: app.globalData.buyList,
       simple: app.globalData.simple,
-      allmoney: money
+      allmoney: money,
+      allbuynum: num
     })
     // console.log(app.globalData.buyList)
     // console.log(this.data.buything)

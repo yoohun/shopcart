@@ -29,6 +29,12 @@
         "text": "购物车",
         "iconPath": "imgs/car.png",
         "selectedIconPath": "imgs/carSelected.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单中心",
+        "iconPath": "imgs/car.png",
+        "selectedIconPath": "imgs/carSelected.png"
       }
     ],
     "color": "#515151",

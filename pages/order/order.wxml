@@ -1,14 +1,13 @@
 <view class='content'>
   <view class='orderList'>
     <view class='orderItem'>
-      <view>
+      <view bindtap='showMessage'>
         <view class='orderItemImg'>
           <image src='../../imgs/carSelected.png' mode='widthFix'></image>
         </view>
         <view class='orderItemText'>
-          <view>nahjwgdwqee</view>
-          <view>address</view>
-          <view>￥54 <text>X3</text> </view>
+            <view class='ordertitle'>nahjwgdwnahjwgdwqeenahjwgdwqeenahjwgdwqeenahjwgdwqeenahjwgdwqeenahjwgdwqeenahjwgdwqeenahjwgdwqeenahjwgdwqeenahjwgdwqeenahjwgdwqeeqee</view>
+          <view class='price'>￥54 <text>X3</text>   </view>
         </view>
       </view>
       <view class='total'> <text>总计： 共3件商品</text>  <text>￥ 213</text> </view>

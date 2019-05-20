@@ -22,7 +22,7 @@
         <view class='proItemContent'>
           <view class='ell'>{{item.name}}</view>
           <text>颜色分类:</text>
-          <text>发货时间：卖家承诺七天</text>
+          <text class='pinkcolor'>发货时间：卖家承诺七天</text>
         </view>
         <view class='price'>
           <text>￥{{item.price}}</text>
@@ -61,12 +61,12 @@
       </view>
     </view>
     <text class='allMoney'>
-      <text class='num'>共1件</text>
+      <text class='num'>共{{allbuynum}}件</text>
       <text class='all'>小计:<text> ￥{{filters.toFix(allmoney)}}</text></text>
     </text>
   </view>
   <view class='jiesuan'>
-    <text class='num'>共1件</text>
+    <text class='num'>共{{allbuynum}}件</text>
     <text class='all'>合计 <text>￥{{filters.toFix(allmoney)}}</text> </text>
     <text class='submit'>提交订单</text>
   </view>
