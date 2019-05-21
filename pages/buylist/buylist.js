@@ -29,6 +29,9 @@ Page({
       })
     }
   },
+  buySubmit () {
+    
+  },
   onShow: function (option) {
     let money = 0
     let num = 0

@@ -35,7 +35,7 @@ page{
   color: rgb(211, 211, 211);
 }
 .product{
-  padding: 20rpx 30rpx;
+  padding: 20rpx 30rpx 0;
   box-sizing: border-box;
   background: white;
 }
@@ -66,4 +66,35 @@ page{
 .textRight{
   text-align: right;
   font-size: 28rpx
+}
+.flexview{
+  margin-bottom: 10rpx;
+}
+.classList{
+  margin-bottom: 20rpx;
+}
+.total{
+  padding: 20rpx;
+  font-size: 34rpx;
+  margin-bottom: 20rox;
+}
+.total .flexview{
+  line-height: 66rpx;
+}
+.graycolor{
+  color: rgb(211, 211, 211);
+}
+.contact{
+  background: white;
+  padding: 30rpx;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  color: rgb(211, 211, 211);
+  margin-top: 20rpx
+}
+.blackcolor{
+  color: black;
+}
+.textcontent{
+  line-height: 58rpx;
 }

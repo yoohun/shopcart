@@ -68,6 +68,6 @@
   <view class='jiesuan'>
     <text class='num'>共{{allbuynum}}件</text>
     <text class='all'>合计 <text>￥{{filters.toFix(allmoney)}}</text> </text>
-    <text class='submit'>提交订单</text>
+    <text class='submit' bindtap='buySubmit'>提交订单</text>
   </view>
 </view>
