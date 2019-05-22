@@ -1,0 +1,32 @@
+/* pages/myself/myself.wxss */
+page{
+  background: rgb(240, 240, 240)
+}
+.myselfInfor{
+  background: white;
+  padding: 30rpx;
+  border-bottom: 1rpx solid rgb(240, 240, 240)
+}
+.myselfInforImg{
+  width: 22%;
+  background: red;
+  border-radius: 50%;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin-right: 20rpx;
+  display: flex;
+  align-items: center
+}
+.myselfInforImg image{
+  width: 100%;
+}
+.myselfInforName{
+  flex: 1;
+  margin: auto 0;
+  font-size: 40rpx;
+}
+.myselfPart{
+  display: flex;
+  justify-content: space-around;
+  background: white;
+}

@@ -1,0 +1,16 @@
+<!--pages/myself/myself.wxml-->
+<view class='myself'>
+  <view class='myselfInfor flexview'>
+    <view class='myselfInforImg'>
+      <image src='{{userInfo.avatarUrl}}' mode='widthFix'></image>
+    </view>
+    <view class='myselfInforName'>
+      {{userInfo.nickName}}
+    </view>
+  </view>
+  <view class='myselfPart'>
+    <view class=''>订单中心</view>
+    <view class=''>购物地址</view>3333                rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+  </view>
+  <view class='shopTips'></view>
+</view>

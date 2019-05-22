@@ -1,6 +1,6 @@
 //logs.js
 const util = require('../../utils/util.js')
-var jsonData = require('../../sj/data.js');
+var jsonData = require('../../data/data.js');
 const app = getApp()
 
 Page({

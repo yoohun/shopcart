@@ -1,12 +1,11 @@
 //logs.js
 const util = require('../../utils/util.js')
-var jsonData = require('../../sj/data.js');
 const app = getApp()
 
 Page({
   data: {
     // num: 1,
-    buything:[],
+    buything:{},
     simple: false,
     addressInfor:[],
     allmoney: 0,
@@ -29,8 +28,13 @@ Page({
       })
     }
   },
-  buySubmit () {
-    
+  buySubmit (e) {
+    this.data.buything[0].address = this.data.addressInfor
+    this.data.buything[0].orderID = '0375324624'
+    this.setData({
+      buything: this.data.buything
+    })
+    console.log(this.data.buything)
   },
   onShow: function (option) {
     let money = 0
@@ -45,8 +49,8 @@ Page({
       allmoney: money,
       allbuynum: num
     })
-    // console.log(app.globalData.buyList)
-    // console.log(this.data.buything)
+    console.log(app.globalData.buyList)
+    console.log(this.data.buything)
   },
   onLoad: function (option) {
     this.setData({

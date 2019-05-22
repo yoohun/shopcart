@@ -1,14 +1,14 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
     "pages/shopcart/shopcart",
     "pages/detail/detail",
     "pages/buylist/buylist",
     "pages/place/place",
     "pages/address/address",
     "pages/order/order",
-    "pages/orderpage/orderpage"
+    "pages/orderpage/orderpage",
+    "pages/myself/myself"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -33,6 +33,12 @@
       {
         "pagePath": "pages/order/order",
         "text": "订单中心",
+        "iconPath": "imgs/car.png",
+        "selectedIconPath": "imgs/carSelected.png"
+      },
+      {
+        "pagePath": "pages/myself/myself",
+        "text": "个人",
         "iconPath": "imgs/car.png",
         "selectedIconPath": "imgs/carSelected.png"
       }
