@@ -5,11 +5,10 @@ page{
 .myselfInfor{
   background: white;
   padding: 30rpx;
-  border-bottom: 1rpx solid rgb(240, 240, 240)
+  border-bottom: 1rpx solid rgb(214, 214, 214);
 }
 .myselfInforImg{
   width: 22%;
-  background: red;
   border-radius: 50%;
   overflow: hidden;
   box-sizing: border-box;
@@ -29,4 +28,35 @@ page{
   display: flex;
   justify-content: space-around;
   background: white;
+  padding: 15rpx 0
+}
+.myselfPart>view{
+  width: 35%;
+}
+.myselfPart .iconfont{
+  font-size: 60rpx;
+  color: grey;
+}
+.myselfPart text{
+  display: block;
+  margin: 10rpx auto;
+  font-size: 30rpx;
+  text-align: center
+}
+.shopTips{
+  background: white;
+  padding:0 20rpx;
+  margin-top: 20rpx
+}
+.shopTips view{
+  line-height: 90rpx;
+  font-size: 34rpx;
+  border-bottom: 1rpx solid rgb(214, 214, 214);
+  color: grey
+}
+.shopTips view:last-child{
+  border-bottom: none;
+}
+.shopTips .iconfont{
+  font-size: 30rpx;
 }

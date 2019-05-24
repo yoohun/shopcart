@@ -2,29 +2,31 @@
   <view class='message'>
     <view class='iconfont icon-weizhi'></view>
     <view class='messageDetail'>
-      <view class='nameAphone'>吴世勋   
-        <text>15916484803</text>
+      <view class='nameAphone'>{{orderList[0].address.name}}   
+        <text>{{orderList[0].address.number}}</text>
       </view>
       <view>
-        dsfsds
+        {{orderList[0].address.city[0]}}{{orderList[0].address.city[1]}}{{orderList[0].address.city[2]}}{{orderList[0].address.otheraddress}}
       </view>
     </view>
   </view>
   <view class='detail'>
     <view class='product'>
-      <view class='productTop flexview'>
-        <view class='productImg'>
-          <image src='../../imgs/carSelected.png' mode='widthFix'></image>
-        </view>
-        <view class='productTitle'>regregrgergregrgergrgerg</view>
-      </view> 
-      <view class='productClass'>
-        <view class='classList'>
-          <view class='flexview'>
-            <text>售后服务二房和无法</text>
-            <text class='redcolor'>￥60</text>
+      <view wx:for='{{orderList}}' wx:key='{{index}}'>
+        <view class='productTop flexview'>
+          <view class='productImg'>
+            <image src='{{item.imgUrl}}' mode='widthFix'></image>
           </view>
-          <view class='textRight'>x1</view>
+          <view class='productTitle'>{{item.name}}</view>
+        </view> 
+        <view class='productClass'>
+          <view class='classList'>
+            <view class='flexview'>
+              <text>售后服务二房和无法</text>
+              <text class='redcolor'>￥{{item.price}}</text>
+            </view>
+            <view class='textRight'>x{{item.num}}</view>
+          </view>
         </view>
       </view>
       <view class='total'>
@@ -44,21 +46,11 @@
     </view>
   </view>
   <view class='contact'>
-    <view class='textcontent'>订单编号：        <text class='blackcolor'>289748923748972398</text> 
+    <view class='textcontent'>订单编号：        <text class='blackcolor'>{{orderId}}</text> 
     </view>
-    <view class='textcontent'>订单编号：        <text class='blackcolor'>289748923748972398</text> 
+    <view class='textcontent'>支付方式：        <text class='blackcolor'>微信</text> 
     </view>
-    <view class='textcontent'>订单编号：        <text class='blackcolor'>289748923748972398</text> 
-    </view>
-    <view class='textcontent'>订单编号：        <text class='blackcolor'>289748923748972398</text> 
-    </view>
-    <view class='textcontent'>订单编号：        <text class='blackcolor'>289748923748972398</text> 
-    </view>
-    <view class='textcontent'>订单编号：        <text class='blackcolor'>289748923748972398</text> 
-    </view>
-    <view class='textcontent'>订单编号：        <text class='blackcolor'>289748923748972398</text> 
-    </view>
-    <view class='textcontent'>订单编号：        <text class='blackcolor'>289748923748972398</text> 
+    <view class='textcontent'>订单状态：        <text class='blackcolor'>已支付</text> 
     </view>
   </view>
 </view>

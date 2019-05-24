@@ -1,15 +1,17 @@
 <view class='content'>
   <view class='orderList'>
-    <view class='orderItem'>
-      <view bindtap='showMessage'>
-        <view class='orderItemImg'>
-          <image src='../../imgs/carSelected.png' mode='widthFix'></image>
+    <view class='orderItem'  wx:for='{{orderList}}' wx:key='{{index}}' bindtap='choseOrder' data-id='{{item[0].orderID}}'>
+        <view wx:for='{{item}}' wx:key='{{item.orderID}}'>
+          <view class='flexview'>
+            <view class='orderItemImg'>
+              <image src='{{item.imgUrl}}' mode='widthFix'></image>
+            </view>
+            <view class='orderItemText'>
+                <view class='ordertitle'>{{item.name}}</view>
+              <view class='price'>￥{{item.price}} <text>X{{item.num}}</text>   </view>
+            </view>
+          </view>
         </view>
-        <view class='orderItemText'>
-            <view class='ordertitle'>nahjwgdwnahjwgdwqeenahjwgdwqeenahjwgdwqeenahjwgdwqeenahjwgdwqeenahjwgdwqeenahjwgdwqeenahjwgdwqeenahjwgdwqeenahjwgdwqeenahjwgdwqeeqee</view>
-          <view class='price'>￥54 <text>X3</text>   </view>
-        </view>
-      </view>
       <view class='total'> <text>总计： 共3件商品</text>  <text>￥ 213</text> </view>
     </view>
   </view>

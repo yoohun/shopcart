@@ -9,8 +9,18 @@
     </view>
   </view>
   <view class='myselfPart'>
-    <view class=''>订单中心</view>
-    <view class=''>购物地址</view>3333                rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+    <view data-id='order'  bindtap='choseIcon'>
+      <text class='iconfont icon-dingdan'></text>
+      <text>订单中心</text>
+    </view>
+    <view data-id='address'  bindtap='choseIcon'>
+      <text class='iconfont icon-tongxunlu'></text>
+      <text>取货地址</text>
+    </view>
   </view>
-  <view class='shopTips'></view>
+  <view class='shopTips'>
+    <view class='flexview'> <text>客服中心</text>  <text class='iconfont icon-xiangyou graycolor'></text> </view>
+    <view class='flexview'> <text>意见反馈</text>  <text class='iconfont icon-xiangyou graycolor'></text> </view>
+    <view class='flexview'> <text>关于我们</text>  <text class='iconfont icon-xiangyou graycolor'></text> </view>
+  </view>
 </view>

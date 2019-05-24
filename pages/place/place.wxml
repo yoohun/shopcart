@@ -1,6 +1,6 @@
 <view class="address">
   <view class='addressList'>
-    <view class='addressItem' wx:for='{{userAdderssInfo}}' wx:key='{{item.id}}'>
+    <view class='addressItem' bindtap='choseaddress' wx:for='{{userAdderssInfo}}' wx:key='{{item.id}}'  data-address='{{item.city}}' data-other='{{item.otheraddress}}' data-id='{{item.id}}'>
       <view class='left'>
         <text class='iconfont icon-weizhi'></text>
       </view>

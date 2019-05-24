@@ -35,7 +35,7 @@ page{
   color: rgb(211, 211, 211);
 }
 .product{
-  padding: 20rpx 30rpx 0;
+  padding: 10rpx 30rpx 0;
   box-sizing: border-box;
   background: white;
 }
@@ -57,6 +57,9 @@ page{
   width: 72%;
   word-break:break-all;
   font-size: 34rpx
+}
+.product>view{
+  margin-top: 30rpx;
 }
 .productClass{
   border-bottom: 1rpx solid  rgb(211, 211, 211);
@@ -80,9 +83,6 @@ page{
 }
 .total .flexview{
   line-height: 66rpx;
-}
-.graycolor{
-  color: rgb(211, 211, 211);
 }
 .contact{
   background: white;

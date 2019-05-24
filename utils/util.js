@@ -15,6 +15,17 @@ const formatNumber = n => {
 }
 
 
+const randomNumber=function () {
+  let outTradeNo = "";  //订单号
+  for (let i = 0; i < 6; i++) //6位随机数，用以加在时间戳后面。
+  {
+    outTradeNo += Math.floor(Math.random() * 10);
+  }
+  outTradeNo = new Date().getTime() + outTradeNo;
+  return outTradeNo
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  randomNumber: randomNumber
 }

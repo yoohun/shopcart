@@ -10,6 +10,22 @@ Page({
     ],
     choseId: ''
   },
+  choseaddress (e) {
+    console.log(e)
+    let pages = getCurrentPages();  // 当前页的数据，可以输出来看看有什么东西
+    let prevPage = pages[pages.length - 2];  // 上一页的数据，也可以输出来看看有什么东西
+    console.log(prevPage.route)
+    if (prevPage.route == 'pages/buylist/buylist') {
+      console.log(prevPage.data)
+      let city = prevPage.data.addressInfor.city;
+      let other = prevPage.data.addressInfor.otheraddress
+      prevPage.setData({
+        [city]: e.currentTarget.dataset.city,
+        [other]: e.currentTarget.dataset.other
+      })
+      console.log(prevPage.data)
+    }
+  },
   choseEdit(e) {
     console.log(e)
     let that = this

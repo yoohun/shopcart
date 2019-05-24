@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
+const util = require('../../utils/util.js')
 
 Page({
   data: {
@@ -49,7 +50,6 @@ Page({
     })
   },
   onLoad: function () {
-
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -65,7 +65,6 @@ Page({
         })
       }
     } else {
-      console.log(3)
       // 在没有 open-type=getUserInfo 版本的兼容处理
       wx.getUserInfo({
         success: res => {

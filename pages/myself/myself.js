@@ -8,11 +8,22 @@ Page({
     userInfo: []
   },
 
+  choseIcon (e) {
+    if (e.currentTarget.dataset.id == 'order') {
+      wx.navigateTo({
+        url: '../order/order',
+      })
+    } else{
+      wx.navigateTo({
+        url: '../place/place',
+      })
+    }
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(app.globalData.userInfo)
     this.setData({
       userInfo: app.globalData.userInfo
     })

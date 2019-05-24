@@ -11,7 +11,7 @@ page{
   background: white;
   margin-bottom: 30rpx;
 }
-.orderItem>view{
+.orderItem .flexview{
 box-sizing: border-box;
   display: flex;
   justify-content: space-between;

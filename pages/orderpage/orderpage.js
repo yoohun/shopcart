@@ -1,18 +1,30 @@
 // pages/orderpage/orderpage.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    orderList: {},
+    orderId: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    // console.log(options)
+    // console.log(app.globalData.orderList)
+    for (let key in app.globalData.orderList) { //获取所点击的订单的内容
+      if (key == options.id) {
+        this.setData({
+          orderList: app.globalData.orderList[key],
+          orderId: options.id
+        })
+        // console.log(this.data.orderList)
+      }
+    }
   },
 
   /**

@@ -1,5 +1,6 @@
 //logs.js
 const util = require('../../utils/util.js')
+var jsonData = require('../../data/data.js');
 const app = getApp()
 
 Page({
@@ -30,11 +31,25 @@ Page({
   },
   buySubmit (e) {
     this.data.buything[0].address = this.data.addressInfor
-    this.data.buything[0].orderID = '0375324624'
+    let id = util.randomNumber()
+    this.data.buything[0].orderID = id
     this.setData({
       buything: this.data.buything
     })
-    console.log(this.data.buything)
+    app.globalData.orderList[id] = this.data.buything
+    // console.log(app.globalData.orderList)
+    wx.showToast({
+      title: '结算成功',
+      icon: 'succes',
+      duration: 1000,
+      mask: true
+    })
+    wx.redirectTo({
+      url: '../order/order'
+    })
+    this.setData({
+      buything: []
+    })
   },
   onShow: function (option) {
     let money = 0
@@ -49,8 +64,8 @@ Page({
       allmoney: money,
       allbuynum: num
     })
-    console.log(app.globalData.buyList)
-    console.log(this.data.buything)
+    // console.log(app.globalData.buyList)
+    // console.log(this.data.buything)
   },
   onLoad: function (option) {
     this.setData({
