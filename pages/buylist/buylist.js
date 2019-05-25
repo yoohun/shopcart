@@ -36,6 +36,7 @@ Page({
     this.setData({
       buything: this.data.buything
     })
+    console.log(this.data.buything[0].address)
     app.globalData.orderList[id] = this.data.buything
     // console.log(app.globalData.orderList)
     wx.showToast({

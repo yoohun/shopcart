@@ -1,6 +1,6 @@
 <view class="address">
   <view class='addressList'>
-    <view class='addressItem' bindtap='choseaddress' wx:for='{{userAdderssInfo}}' wx:key='{{item.id}}'  data-address='{{item.city}}' data-other='{{item.otheraddress}}' data-id='{{item.id}}'>
+    <view class='addressItem' bindtap='choseaddress' wx:for='{{userAdderssInfo}}' wx:key='{{item.id}}'  data-address='{{item.city}}' data-other='{{item.otheraddress}}' data-id='{{item.id}}' data-number='{{item.number}}' data-name='{{item.name}}'>
       <view class='left'>
         <text class='iconfont icon-weizhi'></text>
       </view>
@@ -8,7 +8,7 @@
         <text class='name'>{{item.name}}<text class='number'>{{item.number}}</text> </text>
         <text class='addres'>{{item.city[0]}}{{item.city[1]}}{{item.city[2]}}{{item.otheraddress}}</text>
       </view>
-      <view class='right' bindtap='edit' data-id='{{item.id}}'>
+      <view class='right' catchtap='edit' data-id='{{item.id}}'>
         <text>编辑</text>
       </view>
     </view>

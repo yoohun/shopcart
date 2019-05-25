@@ -42,7 +42,7 @@ Page({
       app.globalData.userAdderssInfo.push(this.data.addressInfor[0])
       // console.log(app.globalData.userAdderssInfo)
     }
-    wx.switchTab({
+    wx.navigateBack({
       url: '../place/place'
     })
   },

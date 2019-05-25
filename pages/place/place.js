@@ -11,19 +11,31 @@ Page({
     choseId: ''
   },
   choseaddress (e) {
-    console.log(e)
+    // console.log(e)
     let pages = getCurrentPages();  // 当前页的数据，可以输出来看看有什么东西
     let prevPage = pages[pages.length - 2];  // 上一页的数据，也可以输出来看看有什么东西
-    console.log(prevPage.route)
+    // console.log(prevPage.route)
+    // console.log(pages)
+    // console.log(prevPage)
     if (prevPage.route == 'pages/buylist/buylist') {
-      console.log(prevPage.data)
-      let city = prevPage.data.addressInfor.city;
-      let other = prevPage.data.addressInfor.otheraddress
+      // console.log(prevPage.data)
+      let city = "addressInfor.city";
+      let other = "addressInfor.otheraddress"
+      let name = "addressInfor.name"
+      let number = "addressInfor.number"
+      let addressid = "addressInfor.id"
+      console.log(prevPage.data.addressInfor.city)
       prevPage.setData({
-        [city]: e.currentTarget.dataset.city,
+        [addressid]: e.currentTarget.dataset.id,
+        [name]: e.currentTarget.dataset.name,
+        [number]: e.currentTarget.dataset.number,
+        [city]: e.currentTarget.dataset.address,
         [other]: e.currentTarget.dataset.other
       })
-      console.log(prevPage.data)
+      console.log(prevPage.data.addressInfor)
+      wx.navigateBack({
+        delta: 1
+      })
     }
   },
   choseEdit(e) {
