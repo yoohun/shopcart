@@ -40,7 +40,7 @@ Page({
     })
     // console.log(this.data.buything[0].address)
     app.globalData.orderList[id] = this.data.buything
-    console.log(app.globalData.orderList)
+    // console.log(app.globalData.orderList)
     wx.showToast({
       title: '结算成功',
       icon: 'succes',
@@ -50,6 +50,7 @@ Page({
     wx.redirectTo({
       url: '../order/order'
     })
+    app.globalData.buyList = []
     this.setData({
       buything: []
     })

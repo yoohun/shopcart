@@ -26,9 +26,9 @@ Page({
     })
     let money=0
     let num = 0
-    console.log(this.data.orderList)
+    // console.log(this.data.orderList)
     for(let key in this.data.orderList) {
-      console.log(this.data.orderList[key])
+      // console.log(this.data.orderList[key])
       this.data.orderList[key].filter(item=>{
         money = money + parseFloat(item.num * item.price)
         num = num + item.num

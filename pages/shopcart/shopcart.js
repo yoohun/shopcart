@@ -74,7 +74,7 @@ Page({
         allMoney: money,
         buylist: chosedArr
       })
-      // console.log(app.globalData.buyList)
+      // console.log(this.data.buylist)
       if (chosedArr.length == this.data.length) {
         this.setData({
           allSelect: {
@@ -211,19 +211,19 @@ Page({
     this.setData({
       simple: false
     })
-    let that = this
-    let arr=[]
-    app.globalData.buyList.filter(item=> {
-      app.globalData.shoppingCart.filter(itemin=>{
-        if (itemin.id != item.id) {
-          // console.log(item.id)
-          // console.log(itemin.id)
-          arr.push(itemin)
-        }
-      })
-    })
-    // console.log(arr)
-    app.globalData.shoppingCart = arr
+    // let that = this
+    // let arr=[]
+    // app.globalData.buyList.filter(item=> {
+    //   app.globalData.shoppingCart.filter(itemin=>{
+    //     if (itemin.id != item.id) {
+    //       // console.log(item.id)
+    //       // console.log(itemin.id)
+    //       arr.push(itemin)
+    //     }
+    //   })
+    // })
+    // // console.log(arr)
+    // app.globalData.shoppingCart = arr
     
     // console.log(app.globalData.buyList)
     wx.navigateTo({
