@@ -206,11 +206,25 @@ Page({
       })
     }
   },
-  toBuyList() {this.data.buylist
+  toBuyList() {
     app.globalData.buyList = this.data.buylist
     this.setData({
       simple: false
     })
+    let that = this
+    let arr=[]
+    app.globalData.buyList.filter(item=> {
+      app.globalData.shoppingCart.filter(itemin=>{
+        if (itemin.id != item.id) {
+          // console.log(item.id)
+          // console.log(itemin.id)
+          arr.push(itemin)
+        }
+      })
+    })
+    // console.log(arr)
+    app.globalData.shoppingCart = arr
+    
     // console.log(app.globalData.buyList)
     wx.navigateTo({
       url: '../buylist/buylist'
@@ -232,7 +246,6 @@ Page({
         shopCart: false
       })
     }
-    // console.log(app.globalData.shoppingCart)
   },
   onLoad: function () {
     this.setData({

@@ -24,7 +24,7 @@ Page({
       let name = "addressInfor.name"
       let number = "addressInfor.number"
       let addressid = "addressInfor.id"
-      console.log(prevPage.data.addressInfor.city)
+      // console.log(prevPage.data.addressInfor.city)
       prevPage.setData({
         [addressid]: e.currentTarget.dataset.id,
         [name]: e.currentTarget.dataset.name,
@@ -32,14 +32,15 @@ Page({
         [city]: e.currentTarget.dataset.address,
         [other]: e.currentTarget.dataset.other
       })
-      console.log(prevPage.data.addressInfor)
-      wx.navigateBack({
-        delta: 1
-      })
+      // console.log(prevPage.data.addressInfor)
+      // console.log(this.data.userAdderssInfo)
+      app.globalData.userAdderssInfo = this.data.userAdderssInfo
+      // console.log(app.globalData.userAdderssInfo)
+      wx.navigateBack();
     }
   },
   choseEdit(e) {
-    console.log(e)
+    // console.log(e)
     let that = this
     switch (e.target.dataset.id) {
       case 'a': 
@@ -78,6 +79,6 @@ Page({
     this.setData({
       userAdderssInfo: app.globalData.userAdderssInfo
     })
-    console.log(app.globalData.userAdderssInfo)
+    // console.log('show')
   }
 })

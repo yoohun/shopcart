@@ -1,5 +1,6 @@
 // pages/orderpage/orderpage.js
 const app = getApp()
+const util = require('../../utils/util.js')
 Page({
 
   /**
@@ -7,7 +8,8 @@ Page({
    */
   data: {
     orderList: {},
-    orderId: ''
+    orderId: '',
+    totalMoney: 0
   },
 
   /**
@@ -15,16 +17,29 @@ Page({
    */
   onLoad: function (options) {
     // console.log(options)
-    // console.log(app.globalData.orderList)
+    console.log(app.globalData.orderList)
+
+    let money = 0
+    let num = 0
     for (let key in app.globalData.orderList) { //获取所点击的订单的内容
       if (key == options.id) {
         this.setData({
           orderList: app.globalData.orderList[key],
           orderId: options.id
         })
-        // console.log(this.data.orderList)
+        console.log(this.data.orderList)
+        this.data.orderList.filter(item=> {
+          console.log(item.price)
+          money = money + parseFloat(item.num * item.price)
+        })
+        this.setData({
+          totalMoney: money,
+          allnum: num
+        })
+      
       }
     }
+    
   },
 
   /**

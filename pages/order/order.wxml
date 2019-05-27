@@ -1,3 +1,4 @@
+<wxs module="filters" src="../../utils/desw.wxs"></wxs>
 <view class='content'>
   <view class='orderList'>
     <view class='orderItem'  wx:for='{{orderList}}' wx:key='{{index}}' bindtap='choseOrder' data-id='{{item[0].orderID}}'>
@@ -12,7 +13,7 @@
             </view>
           </view>
         </view>
-      <view class='total'> <text>总计： 共3件商品</text>  <text>￥ 213</text> </view>
+      <view class='total'> <text>总计： 共{{item[0].allnum}}件商品</text>  <text>￥{{filters.toFix(item[0].allmoney)}}</text> </view>
     </view>
   </view>
 </view>

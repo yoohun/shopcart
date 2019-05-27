@@ -33,12 +33,14 @@ Page({
     this.data.buything[0].address = this.data.addressInfor
     let id = util.randomNumber()
     this.data.buything[0].orderID = id
+    this.data.buything[0].allnum = this.data.allbuynum
+    this.data.buything[0].allmoney = this.data.allmoney
     this.setData({
       buything: this.data.buything
     })
-    console.log(this.data.buything[0].address)
+    // console.log(this.data.buything[0].address)
     app.globalData.orderList[id] = this.data.buything
-    // console.log(app.globalData.orderList)
+    console.log(app.globalData.orderList)
     wx.showToast({
       title: '结算成功',
       icon: 'succes',

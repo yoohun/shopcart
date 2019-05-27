@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    orderList:[]
+    orderList:[],
+    allMoney: 0,
+    allnum: 0
   },
   choseOrder (e) {
     // console.log(e.currentTarget.dataset.id)
@@ -21,6 +23,21 @@ Page({
     // console.log(app.globalData.orderList)
     this.setData({
       orderList: app.globalData.orderList
+    })
+    let money=0
+    let num = 0
+    console.log(this.data.orderList)
+    for(let key in this.data.orderList) {
+      console.log(this.data.orderList[key])
+      this.data.orderList[key].filter(item=>{
+        money = money + parseFloat(item.num * item.price)
+        num = num + item.num
+      })
+    }
+
+    this.setData({
+      allMoney: money,
+      allnum: num
     })
   },
 

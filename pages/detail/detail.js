@@ -41,16 +41,15 @@ Page({
     })
   },
   buy() {
-    // that = this
     app.globalData.buyList.length=0
-    let buyThing = {
+    let thing = {
       'id': this.data.pro.id,
       'name': this.data.pro.title,
       'imgUrl': this.data.pro.imgUrls[0],
       'num': 1,
       'price': this.data.pro.price
     }
-    app.globalData.buyList.push(buyThing)
+    app.globalData.buyList.push(thing)
     this.setData({
       // buyList: list,
       simple: true
@@ -58,6 +57,29 @@ Page({
     wx.navigateTo({
       url: '../buylist/buylist'
     })
+
+    // app.globalData.buyList.length=0
+    // let buyThing = {
+    //   'id': this.data.pro.id,
+    //   'name': this.data.pro.title,
+    //   'imgUrl': this.data.pro.imgUrls[0],
+    //   'num': 1,
+    //   'price': this.data.pro.price
+    // }
+    // app.globalData.buyList.push(buyThing)
+    // this.setData({
+    //   // buyList: list,
+    //   simple: true
+    // })
+    // wx.navigateTo({
+    //   url: '../buylist/buylist'
+    // })
+    console.log(app.globalData.buyList)
+    console.log(app.globalData.orderList)
+
+
+
+
     // let have =0
     // app.globalData.shoppingCart.filter((item, index) => {
     //   if (this.data.pro.id == item.id) {

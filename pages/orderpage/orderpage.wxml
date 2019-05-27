@@ -1,3 +1,4 @@
+<wxs module="filters" src="../../utils/desw.wxs"></wxs>
 <view class='content'>
   <view class='message'>
     <view class='iconfont icon-weizhi'></view>
@@ -32,7 +33,7 @@
       <view class='total'>
         <view class='flexview'>
           <text class='graycolor'>商品总金额：</text>
-          <text>￥60</text>
+          <text>￥{{filters.toFix(totalMoney)}}</text>
         </view>
         <view class='flexview'>
           <text class='graycolor'>配送费：</text>
@@ -40,7 +41,7 @@
         </view>
         <view class='flexview'>
           <text>合计：</text>
-          <text class='redcolor'>￥60</text>
+          <text class='redcolor'>￥{{filters.toFix(totalMoney)}}</text>
         </view>
       </view>
     </view>

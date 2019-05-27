@@ -24,14 +24,14 @@
             <view class='right'>
               <view class='top'>
                 <text class='title'>{{item.name}}</text>
-                <icon class='iconfont icon-shanchu' bindtap='delete' data-id='{{item.id}}'></icon>
+                <icon class='iconfont icon-shanchu' catchtap='delete' data-id='{{item.id}}'></icon>
               </view>
               <view class='bottom'>
                 <text class='price'>￥{{filters.toFix(item.price*item.num)}}</text>
                 <view class='addPlues'>
-                  <text bindtap='minus' class="{{item.num>0?'':'lock'}}" data-id='{{item.id}}' data-price='{{item.price}}'>-</text>
+                  <text catchtap='minus' class="{{item.num>0?'':'lock'}}" data-id='{{item.id}}' data-price='{{item.price}}'>-</text>
                   <text>{{item.num}}</text>
-                  <text bindtap='add' data-id='{{item.id}}'>+</text>
+                  <text catchtap='add' data-id='{{item.id}}'>+</text>
                 </view>
               </view>
             </view>
