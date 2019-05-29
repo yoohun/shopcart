@@ -49,7 +49,8 @@ Page({
       'name': this.data.pro.title,
       'imgUrl': this.data.pro.imgUrls[0],
       'num': 1,
-      'price': this.data.pro.price
+      'price': this.data.pro.price,
+      'toshopCart': false
     }
     app.globalData.buyList.push(thing)
     // console.log(app.globalData.buyList)
@@ -66,9 +67,9 @@ Page({
     var animation = wx.createAnimation({
     });
     animation.bottom(-440).step()
-    let have=0
+    let have=0 //表示购物车里有没有该相同的产品
     let number=0
-    app.globalData.shoppingCart.filter((item,index)=>{
+    app.globalData.shoppingCart.filter((item,index)=>{ //判断。在全局变量购物车里有没有存在着现在点击的这个物品，有的话就合并在一起（have为1）
       if (this.data.pro.id==item.id) {
         let number = app.globalData.shoppingCart[index].num
         let shop = app.globalData.shoppingCart
@@ -79,14 +80,15 @@ Page({
         have = 1
       }
     })
-    if(!have){
+    if(!have){   //如果购物车里没有该产品，直接放入购物车
       let shop = {
         'id': this.data.pro.id,
         'name': this.data.pro.title,
         'imgUrl': this.data.pro.imgUrls[0],
         'num': this.data.pro.buynum + number,
         'price': this.data.pro.price,
-        'checked': 0
+        'checked': 0,
+        'toshopCart': true
       }
       let shopList = app.globalData.shoppingCart.push(shop)
       this.setData({

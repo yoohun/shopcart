@@ -37,7 +37,6 @@ Page({
       list: this.data.shopLists,
       shopLists: this.data.shopLists
     })
-    
   },
   add: function (o) {
     app.globalData.shoppingCart.filter(item => {
@@ -207,28 +206,22 @@ Page({
     }
   },
   toBuyList() {
-    app.globalData.buyList = this.data.buylist
+    app.globalData.buyList = this.data.buylist //把点击的物品购买了
     this.setData({
       simple: false
     })
-    // let that = this
-    // let arr=[]
-    // app.globalData.buyList.filter(item=> {
-    //   app.globalData.shoppingCart.filter(itemin=>{
-    //     if (itemin.id != item.id) {
-    //       // console.log(item.id)
-    //       // console.log(itemin.id)
-    //       arr.push(itemin)
-    //     }
-    //   })
-    // })
-    // // console.log(arr)
-    // app.globalData.shoppingCart = arr
-    
-    // console.log(app.globalData.buyList)
     wx.navigateTo({
       url: '../buylist/buylist'
     })
+  },
+  getNew: function (buyArr, shopCartArr) {
+    console.log(buyArr)
+    console.log(shopCartArr)
+    let newArr =[]
+    for ( let i=0;i<buyArr.length;i++) {
+      newArr = shopCartArr.filter(item => item.id != 'ys01')
+      
+    }
   },
   onShow :function(){
     if (app.globalData.shoppingCart.length != '0') {

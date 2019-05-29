@@ -30,6 +30,17 @@ Page({
     }
   },
   buySubmit (e) {
+    if (this.data.buything[0].toshopCart){
+      let arr = app.globalData.shoppingCart
+      for (let i = 0; i < app.globalData.buyList.length; i++) {
+        arr = arr.filter(item => item.id != app.globalData.buyList[i].id)
+      }
+      // console.log(arr)
+      app.globalData.shoppingCart = arr
+    }
+
+
+    console.log(this.data.buything)
     this.data.buything[0].address = this.data.addressInfor
     let id = util.randomNumber()
     this.data.buything[0].orderID = id
@@ -50,6 +61,7 @@ Page({
     wx.redirectTo({
       url: '../order/order'
     })
+    console.log(this.data.buything)
     app.globalData.buyList = []
     this.setData({
       buything: []
@@ -79,6 +91,5 @@ Page({
       recommond: jsonData.dataList,
       addressInfor: app.globalData.userAdderssInfo[1]
     })
-    
   }
 })
