@@ -30,19 +30,19 @@ Page({
     }
   },
   buySubmit (e) {
-    if (this.data.buything[0].toshopCart){
+
+    // 把以及购买了的物品从购物车里删除掉
+    if (this.data.buything[0].toshopCart) {  //toshopCart判断该产品是直接购买的还是放进购物车之后再来购买的，如果是从购物车里购买的，就需要从购物车里删除掉
       let arr = app.globalData.shoppingCart
       for (let i = 0; i < app.globalData.buyList.length; i++) {
         arr = arr.filter(item => item.id != app.globalData.buyList[i].id)
       }
-      // console.log(arr)
       app.globalData.shoppingCart = arr
     }
 
 
-    console.log(this.data.buything)
     this.data.buything[0].address = this.data.addressInfor
-    let id = util.randomNumber()
+    let id = util.randomNumber()  //利用时间戳自动生成订单号
     this.data.buything[0].orderID = id
     this.data.buything[0].allnum = this.data.allbuynum
     this.data.buything[0].allmoney = this.data.allmoney
@@ -61,7 +61,6 @@ Page({
     wx.redirectTo({
       url: '../order/order'
     })
-    console.log(this.data.buything)
     app.globalData.buyList = []
     this.setData({
       buything: []
@@ -80,8 +79,6 @@ Page({
       allmoney: money,
       allbuynum: num
     })
-    // console.log(app.globalData.buyList)
-    // console.log(this.data.buything)
   },
   onLoad: function (option) {
     this.setData({

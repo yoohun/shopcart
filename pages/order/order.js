@@ -7,7 +7,8 @@ Page({
   data: {
     orderList:[],
     allMoney: 0,
-    allnum: 0
+    allnum: 0,
+    haveOrder: false
   },
   choseOrder (e) {
     // console.log(e.currentTarget.dataset.id)
@@ -39,6 +40,15 @@ Page({
       allMoney: money,
       allnum: num
     })
+    if (this.data.orderList.length) {
+      this.setData({
+        haveOrder: true
+      })
+    } else{
+      this.setData({
+        haveOrder: false
+      })
+    }
   },
 
   /**

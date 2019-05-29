@@ -1,6 +1,14 @@
 page{
   background: rgb(240, 240, 240)
 }
+.noOrder{
+  line-height: 60rpx;
+  padding: 10rpx 30rpx;
+  color: #f74c76;
+  font-size: 46rpx;
+  border-radius: 8rpx;
+  background: white
+}
 .orderList{
   width: 100%;
   box-sizing: border-box;

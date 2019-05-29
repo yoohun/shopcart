@@ -28,6 +28,8 @@ Page({
     
   },
   putinShopCart(){ //点击加入购物车 出现选择
+
+    //选择框的出现或者隐藏时候的动画
     var animation = wx.createAnimation({
       duration: 400,
       timingFunction: 'ease'
@@ -36,14 +38,14 @@ Page({
     this.setData({
       ani: animation.export()
     })
+
+    //选择框出现
     this.setData({
       buylist: false
     })
   },
   buy() {
-
-    // console.log(app.globalData.orderList)
-    // console.log(app.globalData.buyList)
+    //点击购买按钮
     let thing = {
       'id': this.data.pro.id,
       'name': this.data.pro.title,
@@ -53,10 +55,7 @@ Page({
       'toshopCart': false
     }
     app.globalData.buyList.push(thing)
-    // console.log(app.globalData.buyList)
-    // console.log(app.globalData.orderList)
     this.setData({
-      // buyList: list,
       simple: true
     })
     wx.navigateTo({
@@ -64,9 +63,8 @@ Page({
     })
   },
   successBuy(){
-    var animation = wx.createAnimation({
-    });
-    animation.bottom(-440).step()
+    var animation = wx.createAnimation({});
+    animation.bottom(-440).step()  //选择框隐藏起来
     let have=0 //表示购物车里有没有该相同的产品
     let number=0
     app.globalData.shoppingCart.filter((item,index)=>{ //判断。在全局变量购物车里有没有存在着现在点击的这个物品，有的话就合并在一起（have为1）
@@ -162,9 +160,7 @@ Page({
         })
       }
     })
-    // console.log(app.globalData.orderList)
-    // console.log(jsonData.dataList)
-    // console.log(this.data.recommond)
+    
     // wx.request({
     //   url: 'http://123.56.220.217:3031/list',
     //   header: {

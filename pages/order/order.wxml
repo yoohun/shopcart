@@ -1,5 +1,5 @@
 <wxs module="filters" src="../../utils/desw.wxs"></wxs>
-<view class='content'>
+<view class='content' v-if='haveOrder'>
   <view class='orderList'>
     <view class='orderItem'  wx:for='{{orderList}}' wx:key='{{index}}' bindtap='choseOrder' data-id='{{item[0].orderID}}'>
         <view wx:for='{{item}}' wx:key='{{item.orderID}}'>
@@ -16,4 +16,7 @@
       <view class='total'> <text>总计： 共{{item[0].allnum}}件商品</text>  <text>￥{{filters.toFix(item[0].allmoney)}}</text> </view>
     </view>
   </view>
+</view>
+<view class='container' v-if='!haveOrder'>
+  <view class='noOrder'>暂无订单</view>
 </view>
