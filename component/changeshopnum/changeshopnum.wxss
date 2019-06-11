@@ -1,0 +1,40 @@
+.addPlues{
+  border: 1rpx solid rgb(180, 180, 180);
+  border-radius: 8rpx;
+  margin: auto 0;
+  display: inline-block
+}
+.addPlues .lock{
+  color: rgb(207, 207, 207);
+  line-height: 54rpx;
+  display: inline-block;
+  width: 56rpx;
+  text-align: center;
+  border-right: 1rpx solid rgb(180, 180, 180);
+}
+.addPlues .leftRight{
+  line-height: 54rpx;
+  display: inline-block;
+  width: 56rpx;
+  text-align: center;
+  border-right: 1rpx solid rgb(180, 180, 180);
+  color: black;
+}
+.leftRight:last-child{
+  border-right: none;
+  border-left: 1rpx solid rgb(180, 180, 180);
+}
+.num{
+  padding: 0 20rpx
+}
+.addPlues .lock{
+  color: rgb(207, 207, 207);
+}
+.shopList .shopItem .right .bottom .addPlues text:nth-child(2) {
+  width: 80rpx;
+  text-align: center;
+  font-size: 26rpx;
+}
+.shopItem .right .bottom .addPlues text:nth-child(3){
+  border-right: none
+}

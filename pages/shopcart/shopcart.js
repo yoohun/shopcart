@@ -21,28 +21,16 @@ Page({
       url: '../index/index'
     })
   },
-  minus: function (o) {
-    let list = app.globalData.shoppingCart
-    this.data.shopLists.filter(item => {
-      if (item.id == o.currentTarget.dataset.id) {
-        if (item.num!=1) {
-          --item.num
-        } else{
-          return
-        }
-        // console.log(this.data.shopLists)
-      }
-    })
-    this.setData({
-      list: this.data.shopLists,
-      shopLists: this.data.shopLists
-    })
-  },
-  add: function (o) {
-    app.globalData.shoppingCart.filter(item => {
-      let list = app.globalData.shoppingCart
-      if (item.id == o.currentTarget.dataset.id) {
-        ++item.num;
+  myEventListener: function (e) {
+    // let pronum = 'pro.buynum'
+    // this.setData({
+    //   [pronum]: e.detail.numbe
+    // })
+    console.log(e)
+    let list=app.globalData.shoppingCart;
+    app.globalData.shoppingCart.filter(item=> {
+      if(item.id == e.currentTarget.dataset.id) {
+        item.num = e.detail.numbe
         return
       }
     })
@@ -51,6 +39,36 @@ Page({
       shopLists: app.globalData.shoppingCart
     })
   },
+  // minus: function (o) {
+  //   let list = app.globalData.shoppingCart
+  //   this.data.shopLists.filter(item => {
+  //     if (item.id == o.currentTarget.dataset.id) {
+  //       if (item.num!=1) {
+  //         --item.num
+  //       } else{
+  //         return
+  //       }
+  //       // console.log(this.data.shopLists)
+  //     }
+  //   })
+  //   this.setData({
+  //     list: this.data.shopLists,
+  //     shopLists: this.data.shopLists
+  //   })
+  // },
+  // add: function (o) {
+  //   app.globalData.shoppingCart.filter(item => {
+  //     let list = app.globalData.shoppingCart
+  //     if (item.id == o.currentTarget.dataset.id) {
+  //       ++item.num;
+  //       return
+  //     }
+  //   })
+  //   this.setData({
+  //     list: app.globalData.shoppingCart,
+  //     shopLists: app.globalData.shoppingCart
+  //   })
+  // },
   selectIt:function(o){
     let money = 0;
     let arr = o.detail.value

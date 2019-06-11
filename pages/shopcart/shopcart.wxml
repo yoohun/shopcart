@@ -28,11 +28,12 @@
               </view>
               <view class='bottom'>
                 <text class='price'>￥{{filters.toFix(item.price*item.num)}}</text>
-                <view class='addPlues'>
+                <!-- <view class='addPlues'>
                   <text catchtap='minus' class="{{item.num>0?'':'lock'}}" data-id='{{item.id}}' data-price='{{item.price}}'>-</text>
                   <text>{{item.num}}</text>
                   <text catchtap='add' data-id='{{item.id}}'>+</text>
-                </view>
+                </view> -->
+                <changeshopnum bindmyevent="myEventListener" data-id='{{item.id}}' data-price='{{item.price}}'  numbe='{{item.num}}'></changeshopnum>
               </view>
             </view>
           </view>

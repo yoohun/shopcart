@@ -27,6 +27,12 @@ Page({
     })
     
   },
+  myEventListener: function (e) {
+    let pronum = 'pro.buynum'
+    this.setData({
+      [pronum]: e.detail.numbe
+    })
+  },
   putinShopCart(){ //点击加入购物车 出现选择
 
     //选择框的出现或者隐藏时候的动画
@@ -126,25 +132,25 @@ Page({
   bindchange: function (e) {
     this.setData({ current: e.detail.current })
   },
-  minus: function () {
-    var pronum = 'pro.buynum'
-    if (this.data.pro.buynum==0){
-      return
-    } else {
-      this.setData({
-        [pronum]: --this.data.pro.buynum,
-        allPrice: this.data.pro.price * this.data.pro.buynum
-      })
-    }
-  },
-  add: function() {
-    var price = this.data.pro.price
-    var pronum = 'pro.buynum'
-    this.setData({
-      [pronum]: ++this.data.pro.buynum,
-      allPrice: this.data.pro.price * this.data.pro.buynum
-    })
-  },
+  // minus: function () {
+  //   var pronum = 'pro.buynum'
+  //   if (this.data.pro.buynum==0){
+  //     return
+  //   } else {
+  //     this.setData({
+  //       [pronum]: --this.data.pro.buynum,
+  //       allPrice: this.data.pro.price * this.data.pro.buynum
+  //     })
+  //   }
+  // },
+  // add: function() {
+  //   var price = this.data.pro.price
+  //   var pronum = 'pro.buynum'
+  //   this.setData({
+  //     [pronum]: ++this.data.pro.buynum,
+  //     allPrice: this.data.pro.price * this.data.pro.buynum
+  //   })
+  // },
   onLoad: function (option) {
     this.setData({
       logs: (wx.getStorageSync('logs') || []).map(log => {

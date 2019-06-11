@@ -1,1 +1,5 @@
-{}
+{
+  "usingComponents": {
+    "changeshopnum": "/component/changeshopnum/changeshopnum"
+  }
+}

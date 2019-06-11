@@ -40,12 +40,14 @@ Page({
       allMoney: money,
       allnum: num
     })
-    if (this.data.orderList.length) {
-      this.setData({
+    var arr = Object.keys(this.data.orderList);
+    let that=this
+    if (arr.length>0) {
+      that.setData({
         haveOrder: true
       })
     } else{
-      this.setData({
+      that.setData({
         haveOrder: false
       })
     }

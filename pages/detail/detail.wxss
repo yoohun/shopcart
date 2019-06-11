@@ -2,6 +2,10 @@
   margin-bottom: 100rpx;
   box-sizing: border-box 
 }
+.aaaa{
+  height: 100rpx;
+  width: 10rpx;
+}
 .imgScroll{
   width: 100%;
 }
@@ -206,30 +210,14 @@ background: rgba(248, 19, 19, 0.774)
   margin-bottom: 20rpx;
   font-size: 34rpx;
   box-sizing: border-box;
-  display: flex
+  display: flex;
+  align-items: center
 }
-.count text{
+.count>text{
   line-height: 90rpx;
   flex: 1;
 }
 
-.addPlues{
-  border: 1rpx solid rgb(180, 180, 180);
-  border-radius: 8rpx;
-  margin: auto;
-}
-.count .addPlues text{
-  line-height: 60rpx;
-  display: inline-block;
-  padding: 0 20rpx;
-  border-right: 1rpx solid rgb(180, 180, 180);
-}
-.count .addPlues .lock{
-  color: rgb(207, 207, 207);
-}
-.addPlues text:nth-child(3){
-  border-right: none
-}
 .sureBtn{
   color: white;
   border-radius: 0

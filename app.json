@@ -41,5 +41,6 @@
     "selectedColor": "#f74c76",
     "position": "bottom",
     "borderStyle": "black"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

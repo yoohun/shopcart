@@ -1,0 +1,6 @@
+<!--components/changeshopnum/changeshopnum.wxml-->
+<view class='addPlues'>
+  <text class="leftRight" bindtap="onTap" data-id='minus'>-</text>
+  <text class='num'>{{numbe}}</text>
+  <text class='leftRight'bindtap="onTap" data-id='add'>+</text>
+</view>

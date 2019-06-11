@@ -18,7 +18,7 @@
         <text class='productName'>{{pro.shopName}}</text>
       </view>
       <view class='message'>
-        <text>快递：￥{{filters.toFix(pro.youfei)}}</text>
+        <!-- <text>快递：￥{{filters.toFix(pro.youfei)}}</text> -->
         <text>{{pro.place}}</text>
         <text>月销量：{{pro.sellNum>9999?(((pro.sellNum-pro.sellNum%1000)/10000+'万')):(pro.sellNum)}}</text>
       </view>
@@ -77,11 +77,12 @@
       </view>
       <view class='count'>
         <text>购买数量</text>
-        <view class='addPlues'>
+        <!-- <view class='addPlues'>
           <text bindtap='minus' data-id='{{pro.id}}' class="{{num>0?'':'lock'}}">-</text>
           <text>{{pro.buynum}}</text>
           <text bindtap='add' data-id='{{pro.id}}'>+</text>
-        </view>
+        </view> -->
+        <changeshopnum bindmyevent="myEventListener"  numbe='{{pro.buynum}}'></changeshopnum>
       </view>
       <button type='warn' size='default' class='sureBtn' catchtap='successBuy'>确定</button>
     </view>
