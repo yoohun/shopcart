@@ -60,7 +60,6 @@ box-sizing: border-box;
 }
 .orderItemText .ordertitle{
   width: 100%;
-  border: 1rpx solid red;
   word-break:break-all;
   overflow: hidden;
   text-overflow:ellipsis; 

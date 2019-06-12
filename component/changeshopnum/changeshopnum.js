@@ -33,8 +33,8 @@ Component({
     * triggerEvent 用于触发事件
     */
     onTap: function (e) {
-      console.log(e)
-      console.log(this.properties.numbe)
+      // console.log(e)
+      // console.log(this.properties.numbe)
       var myEventDetail = {} // detail对象，提供给事件监听函数
       var myEventOption = {} // 触发事件的选项
       if (e.currentTarget.dataset.id == 'add') {

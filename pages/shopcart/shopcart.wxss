@@ -1,5 +1,4 @@
-.shopcart{
-}
+
 .noShop{
   position: relative;
   top: 200rpx;
@@ -168,7 +167,7 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
   display: inline-block;
   line-height: 40rpx;
   margin-left: 20rpx;
-  width: 78%;
+  width: 60%;
 }
 .settlement{
   padding: 0 40rpx;

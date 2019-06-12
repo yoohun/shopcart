@@ -22,11 +22,6 @@ Page({
     })
   },
   myEventListener: function (e) {
-    // let pronum = 'pro.buynum'
-    // this.setData({
-    //   [pronum]: e.detail.numbe
-    // })
-    console.log(e)
     let list=app.globalData.shoppingCart;
     app.globalData.shoppingCart.filter(item=> {
       if(item.id == e.currentTarget.dataset.id) {
@@ -233,8 +228,8 @@ Page({
     })
   },
   getNew: function (buyArr, shopCartArr) {
-    console.log(buyArr)
-    console.log(shopCartArr)
+    // console.log(buyArr)
+    // console.log(shopCartArr)
     let newArr =[]
     for ( let i=0;i<buyArr.length;i++) {
       newArr = shopCartArr.filter(item => item.id != 'ys01')
